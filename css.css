@@ -1,12 +1,17 @@
 html, body {
   height:99%;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: hidden;
 }
+
+
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -14,18 +19,34 @@ html, body {
   width: 50%;
 }
 
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+
+  .flex-container > div {
+    width:100%;
+    height:50%;
+  }
+}
+
+
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  font-style: normal;
+  font-weight: 700;
+  font-size:9vh;
 }
 
 .imgcontainer {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
- -ms-overflow-style: none;  /* IE 10+ */
-
+  -ms-overflow-style: none;  /* IE 10+ */
   border-radius: 8px;
   height: 100%;
 }
