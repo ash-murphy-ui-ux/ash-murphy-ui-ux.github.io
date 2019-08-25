@@ -1,10 +1,14 @@
 html, body {
+  margin: 0;
+  padding:0;
   height:99%;
   font-family: 'Roboto', sans-serif;
-  overflow-y: hidden;
 }
 
-
+header {
+  background-color: red;
+  height: 50px;
+}
 
 .flex-container {
   display: flex;
@@ -28,19 +32,17 @@ html, body {
   }
 }
 
+.container {
+  overflow: hidden;
+}
 
 .intro {
+  position:fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  right:50%;
 }
 
-.hero {
-  font-style: normal;
-  font-weight: 700;
-  font-size:9vh;
-}
 
 .imgcontainer {
   scroll-snap-type: y mandatory;
