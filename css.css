@@ -1,4 +1,46 @@
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: pink;
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.center > #logo {
+
+}
+.center > #name {
+  margin-left: 100px;
+}
+
+
+
+#logo {
+  min-width: 400px;
+  max-width: 400px;
+}
+
+#name {
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+#desc {
+  position:absolute;
+  top:100%;
+  min-height: 100vh;
 }
