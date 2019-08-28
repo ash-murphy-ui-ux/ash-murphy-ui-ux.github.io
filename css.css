@@ -9,60 +9,102 @@ html, body, main{
   height:100%;
 }
 
-header {
+#header {
   width: 100%;
-  height: 60px;
-  background: pink;
-  opacity: 20;
+  opacity: 0;
   position: fixed;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  top: 0;
+  z-index: 2:
+  /* animation magic */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.flex-center{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+.landing{
   height: 100%;
   min-height: 100%;
 }
 
-.flex-center > #logo {
-
-}
-.flex-center > #name {
-
-}
 
 #logo {
-  width: 50vw;
-  padding: 2vw;
+  position: fixed;
+  top: 29%;
+  left: 6%;
+  width: 40vw;
   /* animation magic */
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out ;
-  -ms-transition: all 1s ease-in-out ;
-  -o-transition: all 1s ease-in-out ;
-  transition: all 1s ease-in-out ;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out ;
+  -ms-transition: all 0.3s ease-out ;
+  -o-transition: all 0.3s ease-out ;
+  transition: all 0.3s ease-out ;
 }
 
 #name {
+  position: fixed;
+  top: 29%;
+
   font-size: 2.5vw;
   white-space: nowrap;
+  /* animation magic */
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out ;
+  -ms-transition: all 0.5s ease-out ;
+  -o-transition: all 0.5s ease-out ;
+  transition: all 0.5s ease-out ;
 }
 
-@media screen and (max-width: 500px) {
-  .flex-center {
-     flex-direction: column;
-  }
-  #logo {
-    width: 90vw;
-  }
+@media screen and (min-width: 600px) {
   #name {
+    left: 55%;
+  }
+  .below-fold {
+    position:absolute;
+    height:150%;
+    left: 55%;
+    width: 35%;
+    scroll-snap-type: mandatory;
+    /* animation magic */
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out ;
+    -ms-transition: all 0.5s ease-out ;
+    -o-transition: all 0.5s ease-out ;
+    transition: all 0.5s ease-out ;
+    }
+
+  #desc {
+    position: sticky;
+    top:29%;
+    padding-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header{
+    height: 100px;
+    background-color: pink;
+    opacity: 0.5;
+  }
+
+  #logo {
+    /*fallback sizing*/
+    width: 70vw;
+  }
+
+  #name {
+    position: relative;
+    top: 50%;
     font-size: 6vw;
     margin-top: 50px;
   }
-}
 
-#desc {
+  .below-fold {
+    padding: 5%;
+  }
 
-
+  #desc {
+    width: 100%;
+  }
 }
