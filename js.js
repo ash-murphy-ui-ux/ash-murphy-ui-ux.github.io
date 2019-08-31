@@ -5,7 +5,7 @@ window.onscroll = function() {
 function scrollAnim() {
   var Logo = document.getElementById("logo");
   var Name = document.getElementById("name");
-  var Head = document.getElementById("header");
+  var Head = document.querySelector("header");
   var x = window.matchMedia("(max-width: 500px)");
 
   //mobile
@@ -14,9 +14,13 @@ function scrollAnim() {
     if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
       Logo.style.width = '100px';
       Logo.style.top = '5%';
+      Logo.style.left = '5%';
+      Logo.style.margin = '0 0 0 0';
     } else {
       Logo.style.width = '';
       Logo.style.top = '';
+      Logo.style.left = '';
+      Logo.style.margin = '';
     }
   }
 
