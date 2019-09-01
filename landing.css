@@ -2,7 +2,7 @@
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+html { font-family: 'Inter var', sans-serif; }
 }
 
 * {
@@ -11,18 +11,16 @@ html { font-family: 'Inter', sans-serif; }
   padding: 0;
 }
 
-html, body, main{
+html, body, .landing{
   height:100%;
 }
 
-body {
-  scroll-snap-type:y mandatory;
-}
+
 header {
   width: 100%;
-  opacity: 0;
   position: fixed;
-  top: 0;
+  height: 100px;
+  opacity: 0;
   /* animation magic */
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -32,48 +30,91 @@ header {
 }
 
 
-.landing{
-  height: 100%;
-  min-height: 100%;
-}
 
 #logo {
   position: fixed;
-  top: 29%;
-  left: 6%;
-  width: 40vw;
   /* animation magic */
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out ;
   -ms-transition: all 0.3s ease-out ;
   -o-transition: all 0.3s ease-out ;
-  transition: all 0.3s ease-out ;
+  transition: all 0.3s ease-out;
 }
 
 #name {
-  position: fixed;
-  top: 29%;
-  font-size: 2.5vw;
+  opacity: 1;
   white-space: nowrap;
+  -webkit-white-space: nowrap;
   /* animation magic */
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out ;
   -ms-transition: all 0.5s ease-out ;
   -o-transition: all 0.5s ease-out ;
   transition: all 0.5s ease-out ;
-  scroll-snap-align: center;
+}
+
+#name > h1 {
+  font-weight: 900;
 }
 
 
+/*mobile*/
+@media screen and (max-width: 600px) {
+
+  #logo {
+    top:20%;
+    left: 50%;
+    margin: 0 0 0 -35vw;
+    width: 70vw;
+  }
+
+  #name {
+    position: fixed;
+    top: 40%;
+    font-size: 5.5vw;
+    margin-top: 50px;
+    padding: 5%;
+  }
+
+  .below-fold {
+    padding: 5%;
+  }
+
+  #desc {
+    top:50%;
+    width: 100%;
+    padding-bottom: 50%;
+  }
+}
+
 /*desktop*/
 @media screen and (min-width: 600px) {
+  .links {
+    position: relative;
+    left: calc(7% + 150px);
+    top: 40px;
+  }
+
+  .links > a {
+    padding: 0 20px 0 20px;
+  }
+  
   #name {
+    position: fixed;
     left: 55%;
+    font-size: 2.5vw;
+    top: 29%;
+  }
+
+  #logo {
+    top: 29%;
+    left: 6%;
+    width: 40vw;
   }
 
   .below-fold {
     position:absolute;
-    height:150%;
+    height:125%;
     left: 55%;
     width: 35%;
     /* animation magic */
@@ -86,42 +127,8 @@ header {
 
   #desc {
     position: sticky;
+    position: -webkit-sticky;
     top:29%;
-    scroll-snap-align: center;
     padding-bottom: 10%;
-  }
-}
-
-
-
-/*mobile*/
-@media screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  #logo {
-    top:20%;
-    left: 50%;
-    margin: 0 0 0 -35vw;
-    width: 70vw;
-  }
-
-  #name {
-    position: relative;
-    top: 40%;
-    font-size: 6vw;
-    margin-top: 50px;
-    padding: 5%;
-  }
-
-  .below-fold {
-    padding: 5%;
-  }
-
-  #desc {
-    width: 100%;
-    padding-bottom: 50%;
-
   }
 }
