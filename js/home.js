@@ -13,7 +13,6 @@ window.onresize = function() {
 function scrollAnim() {
   var Logo = document.querySelector("#logo");
   var Name = document.querySelector("#name");
-  var Head = document.querySelector("header");
   var x = window.matchMedia("(max-width: 600px)");
 
   //mobile
@@ -44,16 +43,15 @@ function scrollAnim() {
       Logo.style.top = '25px';
       Logo.style.left = '7%';
       Name.style.left = '7%';
-      Name.style.opacity = '1'
-      Name.style.top = ''
-      Head.style.opacity = '1'
+      Name.style.opacity = '1';
+      Name.style.top = '';
     } else {
       Logo.style.width = '';
       Logo.style.top = '';
       Logo.style.left = '';
       Name.style.left = '';
-      Name.style.opacity = '1'
-      Name.style.top = ''
+      Name.style.opacity = '1';
+      Name.style.top = '';
     }
   }
 }
