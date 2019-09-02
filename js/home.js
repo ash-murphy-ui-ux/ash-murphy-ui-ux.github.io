@@ -2,6 +2,10 @@ window.onscroll = function() {
   scrollAnim()
 };
 
+window.onload = function() {
+  scrollAnim()
+};
+
 window.onresize = function() {
   scrollAnim()
 };
