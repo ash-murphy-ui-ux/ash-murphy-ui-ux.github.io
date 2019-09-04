@@ -10,6 +10,27 @@ html { font-family: 'Inter var', sans-serif; }
   padding: 0;
 }
 
+:root {
+  --bg-color: #FFFFFF;
+  --heading-color: #000000;
+  --text-color: #000000;
+  --logo-color: #000000;
+  --logo-filter: ;
+}
+
+[data-theme='dark'] {
+  --bg-color: #000000;
+  --heading-color: #ffffff;
+  --text-color: #ffffff;
+  --logo-color: #ffffff;
+  --logo-filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(293deg) brightness(108%) contrast(101%);
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+
 nav {
   width: 100%;
   position: fixed;
@@ -23,12 +44,31 @@ nav {
 }
 
 @media (max-width: 600px) {
-  /* Icon 3 */
-  #nav-icon3 {
-    width: 60px;
-    height: 45px;
+
+  .closedM {
+    visibility: hidden;
+  }
+  .openM {
     position: relative;
-    margin: 50px auto;
+    visibility: visible;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+  }
+
+  .links {
+    position: absolute;
+    top: 50%;
+    margin-top: -9.6px;
+  }
+
+  /*mobile nav menu button*/
+  #navBurger {
+    width: 50px;
+    height: 38px;
+    position: relative;
+    top: 25px;
+    left: 80%;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -39,13 +79,12 @@ nav {
     transition: .5s ease-in-out;
     cursor: pointer;
   }
-
-  #nav-icon3 span {
+  #navBurger span {
     display: block;
     position: absolute;
     height: 9px;
     width: 100%;
-    background: #d3531a;
+    background: var(--logo-color);
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -58,49 +97,36 @@ nav {
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
-
-  #nav-icon3 span:nth-child(1) {
+  #navBurger span:nth-child(1) {
     top: 0px;
   }
-
-  #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  #navBurger span:nth-child(2),#navBurger span:nth-child(3) {
     top: 18px;
   }
-
-  #nav-icon3 span:nth-child(4) {
+  #navBurger span:nth-child(4) {
     top: 36px;
   }
-
-  #nav-icon3.open span:nth-child(1) {
+  #navBurger.open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%;
   }
-
-  #nav-icon3.open span:nth-child(2) {
+  #navBurger.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-
-  #nav-icon3.open span:nth-child(3) {
+  #navBurger.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-
-  #nav-icon3.open span:nth-child(4) {
+  #navBurger.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
-  }
-
-  .links {
-    position: absolute;
-    top: 50%;
-    margin-top: -9.6px;
   }
 }
 
@@ -117,17 +143,16 @@ nav {
   }
 }
 
-
-.toggle-btn {
+/*nightmode switch*/
+.dark-btn {
   position: absolute;
   width: 64px;
   height: 36px;
   top: 50%;
-  margin: -14px 90%;
+  margin: -14px 80%;
   border-radius: 40px;
 
 }
-
 input[type="checkbox"] {
   width: 100%;
   height: 100%;
@@ -141,8 +166,7 @@ input[type="checkbox"] {
   opacity: 0;
   z-index: 2;
 }
-
-#_1st-toggle-btn span {
+#_dark-toggle-btn span {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -152,10 +176,10 @@ input[type="checkbox"] {
   opacity: 1;
   background-color: #fff;
   border-radius: 20px;
-  border: 4px solid #000000;
+  border: 4px solid var(--logo-color);
   transition: 0.2s ease background-color, 0.2s ease opacity;
 }
-#_1st-toggle-btn span:before, #_1st-toggle-btn span:after {
+#_dark-toggle-btn span:before, #_dark-toggle-btn span:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -163,31 +187,29 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  transition: 0.5s ease transform, 0.2s ease background-color;
+  transition: 0.3s ease transform, 0.2s ease background-color;
 }
-#_1st-toggle-btn span:before {
+#_dark-toggle-btn span:before {
   background-color: #fff;
   transform: translate(-30px, 0px);
   z-index: 1;
 }
-#_1st-toggle-btn span:after {
+#_dark-toggle-btn span:after {
   background-color: #000;
   transform: translate(3px, 0px);
   z-index: 0;
 }
-#_1st-toggle-btn input[type="checkbox"]:checked+span {
+#_dark-toggle-btn input[type="checkbox"]:checked+span {
   background-color: #000;
 }
-#_1st-toggle-btn input[type="checkbox"]:active+span {
+#_dark-toggle-btn input[type="checkbox"]:active+span {
   opacity: 0.5;
 }
-#_1st-toggle-btn input[type="checkbox"]:checked+span:before {
+#_dark-toggle-btn input[type="checkbox"]:checked+span:before {
   background-color: #000;
   transform: translate(20px, -8px);
 }
-#_1st-toggle-btn input[type="checkbox"]:checked+span:after {
+#_dark-toggle-btn input[type="checkbox"]:checked+span:after {
   background-color: #fff;
   transform: translate(28px, 0px);
 }
-
-/* First toggle btn completed */

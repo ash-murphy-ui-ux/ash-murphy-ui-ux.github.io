@@ -4,6 +4,7 @@
 
 #logo {
   position: fixed;
+  filter: var(--logo-filter);
   /* animation magic */
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out ;
@@ -25,10 +26,24 @@
 }
 
 #name > h1 {
+  color: var(--text-color);
   font-weight: 900;
   letter-spacing: -0.04em;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+#desc {
+  color: var(--text-color);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
 /*mobile*/
 @media (max-width: 600px) {
