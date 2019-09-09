@@ -3,7 +3,6 @@
 	var hamburger = {
 		navToggle: document.querySelector('#navBurger'),
 		nav: document.querySelector('menu'),
-
 		doToggle: function(e) {
 			e.preventDefault();
 			this.navToggle.classList.toggle('open');
@@ -17,7 +16,7 @@
 
 
 
-const toggleSwitch = document.querySelector('.dark-btn input[type="checkbox"]');
+const toggleSwitch = document.querySelector('.dark-btn #dark-btncheckbox');
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme) {

@@ -18,8 +18,8 @@ function scrollAnim() {
   //mobile
   if (x.matches) {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      Logo.style.width = '100px';
-      Logo.style.top = '25px';
+      Logo.style.width = '80px';
+      Logo.style.top = '40px';
       Logo.style.left = '5%';
       Logo.style.margin = '0 0 0 0';
       Name.style.opacity = '0';
