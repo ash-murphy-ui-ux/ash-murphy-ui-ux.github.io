@@ -1,0 +1,280 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #FFFFFF;
+  --navbar-color: rgba(255,255,255,0.5);
+  --heading-color: #000000;
+  --text-color: #000000;
+  --logo-color: #000000;
+}
+
+[data-theme='dark'] {
+  --bg-color: #000000;
+  --navbar-color: rgba(0,0,0,0.5);
+  --heading-color: #ffffff;
+  --text-color: #ffffff;
+  --logo-color: #ffffff;
+  --logo-filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(293deg) brightness(108%) contrast(101%);
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+menu {
+  z-index: 9;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out ;
+  -ms-transition: all 0.2s ease-out ;
+  -o-transition: all 0.2s ease-out ;
+  transition: all 0.2s ease-out ;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3DDC84;
+}
+
+/*nightmode switch*/
+.dark-btn {
+  position: absolute;
+  width: 64px;
+  height: 36px;
+  border-radius: 40px;
+}
+.dark-btn #dark-btncheckbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+#_dark-toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 4px solid var(--logo-color);
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+#_dark-toggle-btn span:before, #_dark-toggle-btn span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -12.5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.3s ease transform, 0.2s ease background-color;
+}
+#_dark-toggle-btn span:before {
+  background-color: #fff;
+  transform: translate(-30px, 0px);
+  z-index: 1;
+}
+#_dark-toggle-btn span:after {
+  background-color: #000;
+  transform: translate(3px, 0px);
+  z-index: 0;
+}
+#_dark-toggle-btn #dark-btncheckbox:checked+span {
+  background-color: #000;
+}
+#_dark-toggle-btn #dark-btncheckbox:checked+span:before {
+  background-color: #000;
+  transform: translate(20px, -8px);
+}
+#_dark-toggle-btn #dark-btncheckbox:checked+span:after {
+  background-color: #fff;
+  transform: translate(28px, 0px);
+}
+
+@media (max-width: 600px) {
+  menu {
+    position: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    background-color: #63635E;
+    -webkit-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+    -moz-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+    -ms-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+    -o-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+    transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+  }
+
+  .links {
+    height: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .links > li {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+
+  .closedM {
+    opacity: 0;
+    top: -100%;
+    -webkit-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    -moz-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    -ms-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    -o-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+  }
+
+  .openM {
+    opacity:1;
+    top: 30px;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  /*mobile nav menu button*/
+  #navBurger {
+    z-index:10;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 38px;
+    right: 5%;
+    cursor: pointer;
+  }
+
+  #navBurger #navBurgercheckbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 11;
+  }
+
+  #navBurger span {
+    display: block;
+    position: relative;
+    height: 6px;
+    width: 40px;
+    top: 12px;
+    left:4px;
+    margin-bottom: 10px;
+    background: var(--logo-color);
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -ms-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+  #navBurger.open  span:nth-child(2) {
+    -webkit-transform: translate(0, 8px) rotate(45deg);
+    -moz-transform: translate(0, 8px) rotate(45deg);
+    -ms-transform: translate(0, 8px) rotate(45deg);
+    -o-transform: translate(0, 8px) rotate(45deg);
+    transform: translate(0, 8px) rotate(45deg);
+  }
+  #navBurger.open  span:nth-child(3) {
+    -webkit-transform: translate(0, -8px) rotate(-45deg);
+    -moz-transform: translate(0, -8px) rotate(-45deg);
+    -ms-transform: translate(0, -8px) rotate(-45deg);
+    -o-transform: translate(0, -8px) rotate(-45deg);
+    transform: translate(0, -8px) rotate(-45deg);
+  }
+
+  .dark-btn{
+    top: 14px;
+    left: 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  #navBurger #navBurgercheckbox{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+
+  menu {
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    top:0;
+  }
+
+  .dark-btn {
+    top: 50%;
+    margin: -14px 90%;
+  }
+  .links {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -9.6px;
+  }
+
+  .links > li {
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+  .links > a {
+    padding: 0 20px 0 20px;
+  }
+}
