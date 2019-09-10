@@ -14,6 +14,7 @@
 }
 
 #name {
+  position: fixed;
   opacity: 1;
   white-space: nowrap;
   -webkit-white-space: nowrap;
@@ -29,11 +30,16 @@
   color: var(--text-color);
   font-weight: 900;
   letter-spacing: -0.04em;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.below-fold {
+  position:absolute;
+  top: 100%;
 }
 
 #desc {
@@ -43,29 +49,41 @@
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  opacity: 0;
+}
+
+#desc.scrolled {
+  opacity: 1;
 }
 
 /*mobile*/
 @media (max-width: 600px) {
-
   #logo {
-    top:20%;
+    top: 20%;
     left: 50%;
     margin: 0 0 0 -35vw;
     width: 70vw;
   }
-
+  #logo.scrolled {
+    top: 40px;
+    left: 5%;
+    margin: 0 0 0 0;
+    width: 80px;
+  }
   #name {
-    position: fixed;
     top: 40%;
-    font-size: 5.5vw;
     margin-top: 50px;
-    padding: 5%;
+    font-size: 5.5vw;
+    left: 50%;
+    margin-left: -40%;
+  }
+
+  #name.scrolled {
+    opacity: 0;
+    transform: translate(0, -25%);
   }
 
   .below-fold {
-    position: absolute;
-    top: 100%;
     padding: 5%;
   }
 
@@ -73,27 +91,35 @@
     top:50%;
     width: 100%;
     padding-bottom: 50%;
+    opacity: 0;
   }
 }
 
 /*desktop*/
 @media (min-width: 600px) {
+  #logo {
+    top: 29%;
+    left: 7%;
+    width: 40vw;
+  }
+
+  #logo.scrolled{
+    top: 40px;
+    width: 100px;
+  }
+
   #name {
-    position: fixed;
     left: 55%;
     font-size: 2.5vw;
     top: 29%;
   }
 
-  #logo {
-    top: 29%;
-    left: 6%;
-    width: 40vw;
+  #name.scrolled{
+    transform: translate(-130%, 0);
   }
 
+
   .below-fold {
-    position:absolute;
-    top: 100%;
     height:125%;
     left: 55%;
     width: 35%;

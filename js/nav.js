@@ -6,6 +6,7 @@
 		doToggle: function(e) {
 			e.preventDefault();
 			this.navToggle.classList.toggle('open');
+			this.nav.classList.toggle('closedM');
 			this.nav.classList.toggle('openM');
 		}
 	};
