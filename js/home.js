@@ -1,14 +1,20 @@
-window.onscroll = function() {
-  scrollAnim()
-};
+function runSA(){
+var path = window.location.hash;
+if (path == '#home'){
+  document.querySelector("#logo").classList.add("unscrolled");
+  document.addEventListener('scroll', scrollAnim);
+  window.addEventListener('resize', scrollAnim);
+  console.log(path);
+} else {
+  document.querySelector("#logo").classList.remove("unscrolled");
+  }
+}
 
-window.onload = function() {
-  scrollAnim()
-};
+window.addEventListener('hashchange', runSA);
+window.addEventListener('load', runSA);
 
-window.onresize = function() {
-  scrollAnim()
-};
+
+
 
 function scrollAnim() {
   var Logo = document.querySelector("#logo");
@@ -18,11 +24,11 @@ function scrollAnim() {
   //mobile
   if (x.matches) {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      Logo.classList.add("scrolled");
+      Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
     } else {
-      Logo.classList.remove("scrolled");
+      Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
     }
@@ -31,11 +37,11 @@ function scrollAnim() {
   //desktop
   else{
     if (document.body.scrollTop > 225 || document.documentElement.scrollTop > 225) {
-      Logo.classList.add("scrolled");
+      Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
     } else {
-      Logo.classList.remove("scrolled");
+      Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
     }
