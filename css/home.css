@@ -58,13 +58,13 @@
 
 /*mobile*/
 @media (max-width: 600px) {
-  #logo {
+  #logo.unscrolled {
     top: 20%;
     left: 50%;
     margin: 0 0 0 -35vw;
     width: 70vw;
   }
-  #logo.scrolled {
+  #logo {
     top: 40px;
     left: 5%;
     margin: 0 0 0 0;
@@ -97,15 +97,16 @@
 
 /*desktop*/
 @media (min-width: 600px) {
-  #logo {
+  #logo.unscrolled {
     top: 29%;
     left: 7%;
     width: 40vw;
   }
 
-  #logo.scrolled{
+  #logo {
     top: 40px;
-    width: 100px;
+    left: 7%;
+    width: 80px;
   }
 
   #name {

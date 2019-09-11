@@ -1,14 +1,30 @@
-window.onscroll = function() {
-  scrollAnim()
-};
+function runSA(){
+var path = window.location.hash;
+var Logo = document.querySelector("#logo");
+if (path == '#home'){
+  Logo.classList.add("unscrolled");
+  Logo.style.top = '';
+  Logo.style.left = '';
+  Logo.style.width = '';
+  Logo.style.margin = '';
+  document.addEventListener('scroll', scrollAnim);
+  window.addEventListener('load', scrollAnim);
+  window.addEventListener('resize', scrollAnim);
+  console.log(path);
+} else {
+  //need to style inline or else it gets overwitten even though haschange should be stopping it from being overwritten
+  Logo.style.top = '40px';
+  Logo.style.left = '7%';
+  Logo.style.width = '80px';
+  Logo.style.margin = '0 0 0 0';
+  }
+}
 
-window.onload = function() {
-  scrollAnim()
-};
+window.addEventListener('hashchange', runSA);
+window.addEventListener('load', runSA);
 
-window.onresize = function() {
-  scrollAnim()
-};
+
+
 
 function scrollAnim() {
   var Logo = document.querySelector("#logo");
@@ -18,11 +34,11 @@ function scrollAnim() {
   //mobile
   if (x.matches) {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      Logo.classList.add("scrolled");
+      Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
     } else {
-      Logo.classList.remove("scrolled");
+      Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
     }
@@ -31,11 +47,11 @@ function scrollAnim() {
   //desktop
   else{
     if (document.body.scrollTop > 225 || document.documentElement.scrollTop > 225) {
-      Logo.classList.add("scrolled");
+      Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
     } else {
-      Logo.classList.remove("scrolled");
+      Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
     }
