@@ -1,7 +1,7 @@
 function runSA(){
 var path = window.location.hash;
 var Logo = document.querySelector("#logo");
-if (path == '#home'){
+if (path == '#home' || path == ''){
   Logo.classList.add("unscrolled");
   Logo.style.top = '';
   Logo.style.left = '';
@@ -22,7 +22,6 @@ if (path == '#home'){
 
 window.addEventListener('hashchange', runSA);
 window.addEventListener('load', runSA);
-
 
 
 
