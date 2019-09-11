@@ -1,12 +1,22 @@
 function runSA(){
 var path = window.location.hash;
+var Logo = document.querySelector("#logo");
 if (path == '#home'){
-  document.querySelector("#logo").classList.add("unscrolled");
+  Logo.classList.add("unscrolled");
+  Logo.style.top = '';
+  Logo.style.left = '';
+  Logo.style.width = '';
+  Logo.style.margin = '';
   document.addEventListener('scroll', scrollAnim);
+  window.addEventListener('load', scrollAnim);
   window.addEventListener('resize', scrollAnim);
   console.log(path);
 } else {
-  document.querySelector("#logo").classList.remove("unscrolled");
+  //need to style inline or else it gets overwitten even though haschange should be stopping it from being overwritten
+  Logo.style.top = '40px';
+  Logo.style.left = '7%';
+  Logo.style.width = '80px';
+  Logo.style.margin = '0 0 0 0';
   }
 }
 
