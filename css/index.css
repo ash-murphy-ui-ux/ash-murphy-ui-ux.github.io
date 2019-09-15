@@ -52,6 +52,12 @@ a {
 a:hover {
   text-decoration: none;
   color: #3DDC84;
+  opacity: 0.7;
+}
+
+.active {
+  opacity: 1;
+  color: #3DDC84;
 }
 
 /*nightmode switch*/
