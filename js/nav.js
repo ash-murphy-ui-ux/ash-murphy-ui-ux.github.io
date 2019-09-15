@@ -1,3 +1,4 @@
+//mobile menu
 (function() {
 
 	var hamburger = {
@@ -16,7 +17,7 @@
 }());
 
 
-
+//night mode switch
 const toggleSwitch = document.querySelector('.dark-btn #dark-btncheckbox');
 const currentTheme = localStorage.getItem('theme');
 
@@ -39,3 +40,9 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+//active nav link
+document.querySelector('li').addEventListener('click', function(){
+	document.querySelector('li').classList.add('active');
+});

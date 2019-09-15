@@ -39,7 +39,7 @@ ul {
   list-style: none;
 }
 
-a {
+menu a {
   text-decoration: none;
   color: var(--text-color);
   -webkit-transition: all 0.2s ease-out;
@@ -49,7 +49,7 @@ a {
   transition: all 0.2s ease-out ;
 }
 
-a:hover {
+menu a:hover {
   text-decoration: none;
   color: #3DDC84;
   opacity: 0.7;
