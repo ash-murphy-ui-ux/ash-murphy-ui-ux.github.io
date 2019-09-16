@@ -43,6 +43,10 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 //active nav link
-document.querySelector('li').addEventListener('click', function(){
-	document.querySelector('li').classList.add('active');
+document.querySelector('#nav').addEventListener('click',
+function navActive(e) {
+  if (document.querySelector('#nav a.active') !== null) {
+    document.querySelector('#nav a.active').classList.remove('active');
+  }
+  e.target.className = "active";
 });

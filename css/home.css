@@ -4,6 +4,9 @@
 
 #logo {
   position: fixed;
+  top: 40px;
+  left: 7%;
+  width: 80px;
   filter: var(--logo-filter);
   /* animation magic */
   -webkit-transition: all 0.3s ease-out;
@@ -26,7 +29,7 @@
   transition: all 0.5s ease-out ;
 }
 
-#name > h1 {
+#name h1 {
   color: var(--text-color);
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -101,12 +104,6 @@
     top: 29%;
     left: 7%;
     width: 40vw;
-  }
-
-  #logo {
-    top: 40px;
-    left: 7%;
-    width: 80px;
   }
 
   #name {

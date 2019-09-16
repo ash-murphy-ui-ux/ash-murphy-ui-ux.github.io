@@ -28,14 +28,18 @@
     <span></span>
   </div>
   <menu class = 'closedM'>
-    <ul class = 'links'>
-      <li><a class="active" href="#home">Home</a></li>
+    <ul id = 'nav'>
+      <li><a class = 'active' href="#home">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="dark-btn" id="_dark-toggle-btn">
-      <input id = 'dark-btncheckbox' type="checkbox">
-      <span></span>
+    <div>
+      <label class = 'switchLabel' id = 'lightLabel' for='dark-btncheckbox'>Light</label>
+        <div class="dark-btn" id="_dark-toggle-btn">
+          <input id = 'dark-btncheckbox' type="checkbox">
+          <span></span>
+        </div>
+      <label class = 'switchLabel' id = 'nightLabel' for='dark-btncheckbox'>Night</label>
     </div>
   </menu>
   <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
