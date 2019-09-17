@@ -22,31 +22,35 @@
 </head>
 
 <body>
+  <svg alt = '' version="1.2" baseProfile="tiny" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  	 x="0px" y="0px" viewBox="0 0 579 286" xml:space="preserve">
+  <title>Ash Murphy Logo</title>
+  <path d="M95.4,286H0L165.1,0l165.1,286h-95.4l-69.7-120.8L95.4,286z M359.2,286h95.4L289.5,0l-47.8,82.5L359.2,286z M483.6,286H579
+  	L413.9,0l-47.8,82.5L483.6,286z"/>
+  </svg>
   <div id="navBurger">
     <input id = 'navBurgercheckbox' type="checkbox">
-    <span></span>
-    <span></span>
+    <span class = 'hover'></span>
+    <span class = 'hover'></span>
   </div>
   <menu class = 'closedM'>
     <ul id = 'nav'>
-      <li><a class = 'active' href="#home">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a id = 'homelink'href="#home">Home</a></li>
+      <li><a id = 'portlink' href="#portfolio">Portfolio</a></li>
+      <li><a id = 'contlink' href="#contact">Contact</a></li>
     </ul>
-    <div>
-      <label class = 'switchLabel' id = 'lightLabel' for='dark-btncheckbox'>Light</label>
+    <div class = 'switch'>
+      <label class = 'switchLabel decor' id = 'lightLabel' for='dark-btncheckbox'>Light</label>
         <div class="dark-btn" id="_dark-toggle-btn">
           <input id = 'dark-btncheckbox' type="checkbox">
           <span></span>
         </div>
-      <label class = 'switchLabel' id = 'nightLabel' for='dark-btncheckbox'>Night</label>
+      <label class = 'switchLabel decor' id = 'nightLabel' for='dark-btncheckbox'>Night</label>
     </div>
   </menu>
-  <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 579 286" style="enable-background:new 0 0 579 286;" xml:space="preserve">
-    <title>Ash Murphy Logo</title>
-    <path d="M95.41,286H0L165.12,0,330.25,286H234.84L165.12,165.25Zm263.81,0h95.4L289.5,0,241.73,82.51Zm124.37,0H579L413.88,0,366.11,82.51Z"/>
-  </svg>
+
+
+
   <!-- <img class="logo" src="img/AM Logo SVG.svg"/> -->
   <div id = 'app'>
 

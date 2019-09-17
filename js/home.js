@@ -10,7 +10,6 @@ if (path == '#home' || path == ''){
   document.addEventListener('scroll', scrollAnim);
   window.addEventListener('load', scrollAnim);
   window.addEventListener('resize', scrollAnim);
-  console.log(path);
 } else {
   //need to style inline or else it gets overwitten even though haschange should be stopping it from being overwritten
   Logo.style.top = '40px';
@@ -18,7 +17,7 @@ if (path == '#home' || path == ''){
   Logo.style.width = '80px';
   Logo.style.margin = '0 0 0 0';
   }
-}
+};
 
 window.addEventListener('hashchange', runSA);
 window.addEventListener('load', runSA);
@@ -45,7 +44,7 @@ function scrollAnim() {
 
   //desktop
   else{
-    if (document.body.scrollTop > 225 || document.documentElement.scrollTop > 225) {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
       Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");

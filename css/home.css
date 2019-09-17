@@ -7,8 +7,8 @@
   top: 40px;
   left: 7%;
   width: 80px;
-  filter: var(--logo-filter);
-  /* animation magic */
+  margin: 0 0 0 0;
+  fill: var(--logo-fill);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out ;
   -ms-transition: all 0.3s ease-out ;
@@ -21,7 +21,6 @@
   opacity: 1;
   white-space: nowrap;
   -webkit-white-space: nowrap;
-  /* animation magic */
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out ;
   -ms-transition: all 0.5s ease-out ;
@@ -67,12 +66,7 @@
     margin: 0 0 0 -35vw;
     width: 70vw;
   }
-  #logo {
-    top: 40px;
-    left: 5%;
-    margin: 0 0 0 0;
-    width: 80px;
-  }
+
   #name {
     top: 40%;
     margin-top: 50px;
@@ -116,12 +110,10 @@
     transform: translate(-130%, 0);
   }
 
-
   .below-fold {
     height:125%;
     left: 55%;
     width: 35%;
-    /* animation magic */
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out ;
     -ms-transition: all 0.5s ease-out ;

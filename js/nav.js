@@ -2,17 +2,17 @@
 (function() {
 
 	var hamburger = {
-		navToggle: document.querySelector('#navBurger'),
-		nav: document.querySelector('menu'),
+		menuToggle: document.querySelector('#navBurger'),
+		menu: document.querySelector('menu'),
 		doToggle: function(e) {
 			e.preventDefault();
-			this.navToggle.classList.toggle('open');
-			this.nav.classList.toggle('closedM');
-			this.nav.classList.toggle('openM');
+			this.menuToggle.classList.toggle('open');
+			this.menu.classList.toggle('closedM');
+			this.menu.classList.toggle('openM');
 		}
 	};
 
-	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+	hamburger.menuToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
 
 }());
 
@@ -43,10 +43,25 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 //active nav link
-document.querySelector('#nav').addEventListener('click',
+window.addEventListener('hashchange', navActive);
+document.querySelector('#nav').addEventListener('load', navActive(event));
+
 function navActive(e) {
-  if (document.querySelector('#nav a.active') !== null) {
-    document.querySelector('#nav a.active').classList.remove('active');
-  }
-  e.target.className = "active";
-});
+	var path = window.location.hash;
+	homelink = document.querySelector('#homelink');
+	portlink = document.querySelector('#portlink');
+	contlink = document.querySelector('#contlink');
+	if (path == '#home' || path == ''){
+		document.querySelector('#homelink').classList.add('active');
+		document.querySelector('#portlink').classList.remove('active');
+		document.querySelector('#contlink').classList.remove('active');
+	} else if (path == '#portfolio'){
+		document.querySelector('#homelink').classList.remove('active');
+		document.querySelector('#portlink').classList.add('active');
+		document.querySelector('#contlink').classList.remove('active');
+	} else if (path == '#contact'){
+		document.querySelector('#portlink').classList.remove('active');
+		document.querySelector('#homelink').classList.remove('active');
+		document.querySelector('#contlink').classList.add('active');
+	}
+};
