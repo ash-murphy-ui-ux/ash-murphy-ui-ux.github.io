@@ -1,0 +1,21 @@
+.portfolio {
+}
+
+.portGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  padding: 20%;
+  grid-gap: 10px;
+}
+
+.portItem {
+  padding: 5%;
+  text-align: center;
+  background-color: var(--decor-color);
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out ;
+  -ms-transition: color 0.2s ease-out ;
+  -o-transition: color 0.2s ease-out ;
+  transition: color 0.2s ease-out ;
+}
