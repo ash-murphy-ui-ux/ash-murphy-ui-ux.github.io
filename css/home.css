@@ -9,6 +9,7 @@
   width: 80px;
   margin: 0 0 0 0;
   fill: var(--logo-fill);
+  z-index: 10;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out ;
   -ms-transition: all 0.3s ease-out ;
