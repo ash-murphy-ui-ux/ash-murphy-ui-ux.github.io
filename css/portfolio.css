@@ -1,20 +1,26 @@
 .portfolio {
+  display: flex;
+  justify-content: center;
   margin-top: 120px;
-  margin-left:10%;
-  margin-right:10%;
 }
 
 .portGrid {
   display: grid;
-  width: 100%;
+  width: 90%;
+  height: 90vw;
+  min-height: 90%;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  text-align: center;
 }
 
 .portItem {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  padding-top:100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://via.placeholder.com/800');
+  background-size: cover;
+  background-position: center;
   background-color: var(--decor-color);
   color: var(--text-color);
   -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out;
@@ -24,39 +30,10 @@
   transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 
-.thumb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 /*mobile*/
 @media (max-width: 600px) {
-  .portfolio {
-    margin-top: 120px;
-    margin-left:5%;
-    margin-right:5%;
-  }
-  .portGrid {
-    grid-template-columns: auto auto;
-    grid-gap: 2% 2%;
-  }
 }
 
 /*desktop small*/
 @media (min-width: 600px) {
-  .portGrid {
-    grid-template-columns: auto auto;
-    grid-gap: 2% 4%;
-  }
-}
-
-/*desktop*/
-@media (min-width: 800px) {
-  .portGrid {
-    grid-template-columns: auto auto auto;
-    grid-gap: 3% 3%;
-  }
 }
