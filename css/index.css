@@ -74,6 +74,56 @@ menu a.active, menu a:active, menu a:focus{
   color: var(--decor-color);
 }
 
+.fadein {
+    -webkit-animation: smooth 5s ease-in;
+    -moz-animation: smooth 5s ease-in;
+    -o-animation: smooth 5s ease-in;
+    -ms-animation: smooth 5s ease-in;
+    animation: smooth 0.5s ease-in;
+}
+.fadein2 {
+    -webkit-animation: smooth 5s ease-in;
+    -moz-animation: smooth 5s ease-in;
+    -o-animation: smooth 5s ease-in;
+    -ms-animation: smooth 5s ease-in;
+    animation: smooth2 0.5s ease-in;
+}
+.fadein3 {
+    -webkit-animation: smooth 5s ease-in;
+    -moz-animation: smooth 5s ease-in;
+    -o-animation: smooth 5s ease-in;
+    -ms-animation: smooth 5s ease-in;
+    animation: smooth3 0.5s ease-in;
+}
+
+@-webkit-keyframes smooth {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@-moz-keyframes smooth {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@-o-keyframes smooth {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes smooth {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes smooth2 {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes smooth3 {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
 #nav {
   display:flex;
   align-items: center;

@@ -1,3 +1,8 @@
+/*trigger animation*/
+window.addEventListener('hashchange', runSA);
+window.addEventListener('load', runSA);
+
+/*animate if home is active*/
 function runSA(){
 var path = window.location.hash;
 var Logo = document.querySelector("#logo");
@@ -19,11 +24,7 @@ if (path == '#home' || path == ''){
   }
 };
 
-window.addEventListener('hashchange', runSA);
-window.addEventListener('load', runSA);
-
-
-
+/*home page animation code*/
 function scrollAnim() {
   var Logo = document.querySelector("#logo");
   var Name = document.querySelector("#name");

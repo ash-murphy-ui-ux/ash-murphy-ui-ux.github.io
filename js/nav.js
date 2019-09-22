@@ -51,17 +51,26 @@ function navActive(e) {
 	homelink = document.querySelector('#homelink');
 	portlink = document.querySelector('#portlink');
 	contlink = document.querySelector('#contlink');
+	document.querySelector('#app').classList.remove('fadein');
+	document.querySelector('#app').classList.remove('fadein2');
+	document.querySelector('#app').classList.remove('fadein3');
+	
 	if (path == '#home' || path == ''){
 		document.querySelector('#homelink').classList.add('active');
 		document.querySelector('#portlink').classList.remove('active');
 		document.querySelector('#contlink').classList.remove('active');
+		document.querySelector('#app').classList.add('fadein');
+
 	} else if (path == '#portfolio'){
 		document.querySelector('#homelink').classList.remove('active');
 		document.querySelector('#portlink').classList.add('active');
 		document.querySelector('#contlink').classList.remove('active');
+		document.querySelector('#app').classList.add('fadein2');
+
 	} else if (path == '#contact'){
 		document.querySelector('#portlink').classList.remove('active');
 		document.querySelector('#homelink').classList.remove('active');
 		document.querySelector('#contlink').classList.add('active');
+		document.querySelector('#app').classList.add('fadein3');
 	}
 };
