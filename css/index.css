@@ -12,7 +12,6 @@ html { font-family: 'Inter var', sans-serif; }
 
 :root {
   --bg-color: #FFFFFF;
-  --navbar-color: rgba(255,255,255,0.5);
   --heading-color: #000000;
   --text-color: #000000;
   --decor-color:#3DDC84;
@@ -23,7 +22,6 @@ html { font-family: 'Inter var', sans-serif; }
 
 [data-theme='dark'] {
   --bg-color: #000000;
-  --navbar-color: rgba(0,0,0,0.5);
   --heading-color: #ffffff;
   --text-color: #ffffff;
   --decor-color:#FF5A5F;
@@ -38,7 +36,6 @@ body{
 
 menu {
   position: fixed;
-  background-color: var(--navbar-color);
   display:flex;
   align-items: center;
   justify-content: center;
@@ -52,11 +49,11 @@ ul {
 menu a {
   text-decoration: none;
   color: var(--text-color);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out ;
-  -ms-transition: all 0.5s ease-out ;
-  -o-transition: all 0.5s ease-out ;
-  transition: all 0.5s ease-out ;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out ;
+  -ms-transition: color 0.5s ease-out ;
+  -o-transition: color 0.5s ease-out ;
+  transition: color 0.5s ease-out ;
 }
 
 menu a:hover {
@@ -82,17 +79,17 @@ menu a.active, menu a:active, menu a:focus{
     animation: smooth 0.5s ease-in;
 }
 .fadein2 {
-    -webkit-animation: smooth 5s ease-in;
-    -moz-animation: smooth 5s ease-in;
-    -o-animation: smooth 5s ease-in;
-    -ms-animation: smooth 5s ease-in;
+    -webkit-animation: smooth2 5s ease-in;
+    -moz-animation: smooth2 5s ease-in;
+    -o-animation: smooth2 5s ease-in;
+    -ms-animation: smooth2 5s ease-in;
     animation: smooth2 0.5s ease-in;
 }
 .fadein3 {
-    -webkit-animation: smooth 5s ease-in;
-    -moz-animation: smooth 5s ease-in;
-    -o-animation: smooth 5s ease-in;
-    -ms-animation: smooth 5s ease-in;
+    -webkit-animation: smooth3 5s ease-in;
+    -moz-animation: smooth3 5s ease-in;
+    -o-animation: smooth3 5s ease-in;
+    -ms-animation: smooth3 5s ease-in;
     animation: smooth3 0.5s ease-in;
 }
 
@@ -127,8 +124,8 @@ menu a.active, menu a:active, menu a:focus{
 #nav {
   display:flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
 }
 
 .decor {
@@ -233,15 +230,16 @@ menu a.active, menu a:active, menu a:focus{
     width: 90%;
     left: 50%;
     margin-left: -45%;
+    opacity: 0;
+    top: -100%;
     background-color: var(--bg-color);
     border: 5px solid var(--text-color);
-    -webkit-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
-    -moz-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
-    -ms-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
-    -o-transition: opacity 0.0s ease, top 0.3s ease 0.3s;
-    transition: opacity 0.0s ease, top 0.3s ease 0.3s;
+    -webkit-transition:top 0.3s ease 0.3s;
+    -moz-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    -ms-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    -o-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
+    transition:ease, top 0.3s ease 0.3s;
   }
-
   #nav {
     height: 60%;
     flex-direction: column;
@@ -249,17 +247,6 @@ menu a.active, menu a:active, menu a:focus{
     font-size: 20px;
     font-weight: 600;
     justify-content: space-evenly;
-  }
-
-
-  .closedM {
-    opacity: 0;
-    top: -100%;
-    -webkit-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    -moz-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    -ms-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    -o-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    transition: opacity 0.3s ease, top 0.3s ease 0.3s;
   }
   .openM {
     opacity:1;
@@ -350,6 +337,9 @@ menu a.active, menu a:active, menu a:focus{
     top: 14px;
     left: 8px;
   }
+  .menubg {
+    display:none;
+  }
 }
 
 @media (min-width: 600px) {
@@ -361,6 +351,23 @@ menu a.active, menu a:active, menu a:focus{
     width: 100%;
     height: 120px;
     top:0;
+  }
+  .menubg{
+    position: fixed;
+    background-color: var(--bg-color);
+    opacity: 0.1;
+    width: 100%;
+    height: 100px;
+    top:0;
+    z-index: 8;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out ;
+    -ms-transition: opacity 0.2s ease-out ;
+    -o-transition: opacity 0.2s ease-out ;
+    transition: opacity 0.2s ease-out ;
+  }
+  menu:hover ~ .menubg{
+    opacity: 0.9;
   }
 
   .dark-btn {

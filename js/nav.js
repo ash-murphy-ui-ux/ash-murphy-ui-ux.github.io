@@ -7,7 +7,6 @@
 		doToggle: function(e) {
 			e.preventDefault();
 			this.menuToggle.classList.toggle('open');
-			this.menu.classList.toggle('closedM');
 			this.menu.classList.toggle('openM');
 		}
 	};
@@ -54,7 +53,7 @@ function navActive(e) {
 	document.querySelector('#app').classList.remove('fadein');
 	document.querySelector('#app').classList.remove('fadein2');
 	document.querySelector('#app').classList.remove('fadein3');
-	
+
 	if (path == '#home' || path == ''){
 		document.querySelector('#homelink').classList.add('active');
 		document.querySelector('#portlink').classList.remove('active');
