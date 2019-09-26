@@ -234,11 +234,11 @@ menu a.active, menu a:active, menu a:focus{
     top: -100%;
     background-color: var(--bg-color);
     border: 5px solid var(--text-color);
-    -webkit-transition:top 0.3s ease 0.3s;
+    -webkit-transition: opacity 0.3s ease,top 0.3s ease 0.3s;
     -moz-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
     -ms-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
     -o-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    transition:ease, top 0.3s ease 0.3s;
+    transition:opacity 0.3s ease, top 0.3s ease 0.3s, z-index 0.3s ease 3s;
   }
   #nav {
     height: 60%;
@@ -366,7 +366,7 @@ menu a.active, menu a:active, menu a:focus{
     -o-transition: opacity 0.2s ease-out ;
     transition: opacity 0.2s ease-out ;
   }
-  menu:hover ~ .menubg{
+  menu:hover ~ .menubg, #logo:hover ~ .menubg{
     opacity: 0.9;
   }
 

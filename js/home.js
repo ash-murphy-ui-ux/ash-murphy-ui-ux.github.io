@@ -29,6 +29,7 @@ function scrollAnim() {
   var Logo = document.querySelector("#logo");
   var Name = document.querySelector("#name");
   var Desc = document.querySelector("#desc");
+  var Arrow = document.querySelector(".arrows");
   var x = window.matchMedia("(max-width: 600px)");
   //mobile
   if (x.matches) {
@@ -36,10 +37,12 @@ function scrollAnim() {
       Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
+      Arrow.classList.add("scrolled");
     } else {
       Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
+      Arrow.classList.remove("scrolled");
     }
   }
 
@@ -49,10 +52,12 @@ function scrollAnim() {
       Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
+      Arrow.classList.add("scrolled");
     } else {
       Logo.classList.add("unscrolled");
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
+      Arrow.classList.remove("scrolled");
     }
   }
 }

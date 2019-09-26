@@ -5,7 +5,8 @@
         var router = new Router([
             new Route('home', 'home.html', true),
             new Route('portfolio', 'portfolio.html'),
-            new Route('contact', 'contact.html')
+            new Route('contact', 'contact.html'),
+            new Route('portfolio/test', 'portfolio/port-test.html')
         ]);
     }
     init();
