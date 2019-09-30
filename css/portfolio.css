@@ -1,18 +1,73 @@
 .portfolio {
-  display: flex;
-  justify-content: center;
-  margin: 120px 0 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 1200px;
 }
 
-.portGrid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-auto-rows: auto auto auto auto;
-  grid-gap: 20px;
-  text-align: center;
+.listCont{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  float: left;
 }
 
-.portItem {
+.portList{
+
+  font-weight: 700;
+  font-style: italic;
+}
+.portList a{
+  text-decoration: none;
+  color: var(--decor-color);
+}
+.portTitle{
+  color: var(--text-color);
+  font-size: 4vw;
+  white-space: nowrap;
+  -webkit-white-space: nowrap;
+  -webkit-transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
+  -o-transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
+  transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
+}
+
+.portList a:hover > li .portTitle {
+  color: var(--decor-color);
+  font-size: 5vw;
+  transform: translate(50px, 0);
+}
+
+.portPreview{
+  float: right;
+  width: 29vw;
+  max-width: 400px;
+  height: 29vw;
+  max-height: 400px;
+  background-image: url('https://via.placeholder.com/800');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--decor-color);
+  color: var(--text-color);
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
+  -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
+  -ms-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
+  -o-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
+}
+
+@media (max-width: 1600px){
+  .portTitle{
+    font-size: 5vw;
+  }
+  .portList a:hover > li .portTitle {
+    font-size: 6vw;
+  }
+}
+/*.portItem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,9 +92,15 @@
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+.portGrid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  text-align: Left;
+}
 
 
-/*mobile*/
 @media (max-width: 600px) {
   .portGrid{
     grid-template-columns: auto auto;
@@ -53,6 +114,5 @@
   }
 }
 
-/*desktop*/
 @media (min-width: 600px) {
-}
+}*/

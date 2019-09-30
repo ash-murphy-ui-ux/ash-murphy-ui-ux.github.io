@@ -29,7 +29,7 @@ function scrollAnim() {
   var Logo = document.querySelector("#logo");
   var Name = document.querySelector("#name");
   var Desc = document.querySelector("#desc");
-  var Arrow = document.querySelector(".arrows");
+  var Arrow = document.querySelector(".d-arrow");
   var x = window.matchMedia("(max-width: 600px)");
   //mobile
   if (x.matches) {
