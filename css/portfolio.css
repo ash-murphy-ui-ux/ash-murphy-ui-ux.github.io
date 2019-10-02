@@ -7,15 +7,12 @@
   max-width: 1200px;
 }
 
-.listCont{
+
+.portList{
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   float: left;
-}
-
-.portList{
-
   font-weight: 700;
   font-style: italic;
 }
@@ -35,19 +32,19 @@
   transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
 }
 
-.portList a:hover > li .portTitle {
+.portList a:hover > li .portTitle, .portList a:focus > li .portTitle {
   color: var(--decor-color);
   font-size: 5vw;
   transform: translate(50px, 0);
 }
 
-.portPreview{
+.portPreview {
   float: right;
   width: 29vw;
   max-width: 400px;
   height: 29vw;
   max-height: 400px;
-  background-image: url('https://via.placeholder.com/800');
+
   background-size: cover;
   background-position: center;
   background-color: var(--decor-color);
@@ -58,12 +55,28 @@
   -o-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
   transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
 }
+.nidusbg{
+  background-image: url('https://via.placeholder.com/800');
+}
+
+.energyumpirebg{
+  background-image: url('https://via.placeholder.com/600');
+}
+
+.darkspedebg{
+  background-image: url('https://via.placeholder.com/300');
+}
+
+.icondesignsbg{
+  background-image: url('https://via.placeholder.com/900');
+}
+
 
 @media (max-width: 1600px){
   .portTitle{
     font-size: 5vw;
   }
-  .portList a:hover > li .portTitle {
+  portList a:hover > li .portTitle, .portList a:focus > li .portTitle {
     font-size: 6vw;
   }
 }
