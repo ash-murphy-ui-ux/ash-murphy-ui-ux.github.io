@@ -34,7 +34,7 @@ body{
   background-color: var(--bg-color);
 }
 
-menu {
+.menu {
   position: fixed;
   display:flex;
   align-items: center;
@@ -46,7 +46,7 @@ ul {
   list-style: none;
 }
 
-menu a {
+.menu a {
   text-decoration: none;
   color: var(--text-color);
   -webkit-transition: color 0.5s ease-out;
@@ -56,7 +56,7 @@ menu a {
   transition: color 0.5s ease-out ;
 }
 
-menu a:hover, menu a:focus {
+.menu a:hover, .menu a:focus {
   color: var(--decor-color);
   opacity: 0.7;
   -webkit-transition: all 0.5s ease-out;
@@ -66,30 +66,30 @@ menu a:hover, menu a:focus {
   transition: all 0.5s ease-out ;
 }
 
-menu a.active, menu a:active{
+.menu a.active, .menu a:active{
   opacity: 1;
   color: var(--decor-color);
 }
 
 .fadein {
-    -webkit-animation: smooth 5s ease-in;
-    -moz-animation: smooth 5s ease-in;
-    -o-animation: smooth 5s ease-in;
-    -ms-animation: smooth 5s ease-in;
+    -webkit-animation: smooth 0.5s ease-in;
+    -moz-animation: smooth 0.5s ease-in;
+    -o-animation: smooth 0.5s ease-in;
+    -ms-animation: smooth 0.5s ease-in;
     animation: smooth 0.5s ease-in;
 }
 .fadein2 {
-    -webkit-animation: smooth2 5s ease-in;
-    -moz-animation: smooth2 5s ease-in;
-    -o-animation: smooth2 5s ease-in;
-    -ms-animation: smooth2 5s ease-in;
+    -webkit-animation: smooth2 0.5s ease-in;
+    -moz-animation: smooth2 0.5s ease-in;
+    -o-animation: smooth2 0.5s ease-in;
+    -ms-animation: smooth2 0.5s ease-in;
     animation: smooth2 0.5s ease-in;
 }
 .fadein3 {
-    -webkit-animation: smooth3 5s ease-in;
-    -moz-animation: smooth3 5s ease-in;
-    -o-animation: smooth3 5s ease-in;
-    -ms-animation: smooth3 5s ease-in;
+    -webkit-animation: smooth3 0.5s ease-in;
+    -moz-animation: smooth3 0.5s ease-in;
+    -o-animation: smooth3 0.5s ease-in;
+    -ms-animation: smooth3 0.5s ease-in;
     animation: smooth3 0.5s ease-in;
 }
 
@@ -225,7 +225,7 @@ menu a.active, menu a:active{
 }
 
 @media (max-width: 600px) {
-  menu {
+  .menu {
     height: 60%;
     width: 90%;
     left: 50%;
@@ -259,7 +259,7 @@ menu a.active, menu a:active{
     transition: opacity 0.3s ease;
   }
 
-  /*mobile nav menu button*/
+  /*mobile nav .menu button*/
   #navBurger {
     z-index:12;
     position: fixed;
@@ -347,7 +347,7 @@ menu a.active, menu a:active{
     display:none;
   }
 
-  menu {
+  .menu {
     width: 100%;
     height: 120px;
     top:0;
@@ -366,7 +366,7 @@ menu a.active, menu a:active{
     -o-transition: opacity 0.2s ease-out ;
     transition: opacity 0.2s ease-out ;
   }
-  menu:hover ~ .menubg, #logo:hover ~ .menubg{
+  .menu:hover ~ .menubg, #logo:hover ~ .menubg{
     opacity: 0.9;
   }
 

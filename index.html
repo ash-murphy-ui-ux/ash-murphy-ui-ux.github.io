@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="css/portItem.css">
   <link rel="stylesheet" type="text/css" href="css/contact.css">
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -33,13 +34,16 @@
     <span></span>
     <span></span>
   </div>
-  <!--Menu - Nav/night button-->
-  <menu>
+  <!--Menu - Nav-->
+  <menu class = 'menu'>
     <ul id = 'nav'>
       <li><a id = 'homelink' href="#home">Home</a></li>
       <li><a id = 'portlink' href="#portfolio">Portfolio</a></li>
       <li><a id = 'contlink' href="#contact">Contact</a></li>
     </ul>
+    <!--Back to portfolio button-->
+    <a href = '#portfolio' class = 'portBtn'><div class = 'back-b'><span class = 'back-arr'></span>Back to Portfolio</div></a>
+    <!--nightmode switch-->
     <div class = 'switch'>
       <label class = 'switchLabel' id = 'lightLabel' for='dark-btncheckbox'>Light</label>
         <div class="dark-btn" id="_dark-toggle-btn">

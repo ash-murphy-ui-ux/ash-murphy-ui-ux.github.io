@@ -31,20 +31,20 @@ function hello () {
 
 /* triggered in html*/
 function nidusChange(){
-  document.querySelector('.portPreview').classList.remove('energyumpirebg', 'darkspedebg','icondesignsbg');
-  document.querySelector('.portPreview').classList.add('nidusbg')};
+  document.querySelector('.portPreview').classList.remove('energyumpirebg', 'darkspedebg','icondesignsbg', 'fadein');
+  document.querySelector('.portPreview').classList.add('nidusbg', 'fadein')};
 
 function energyumpireChange(){
-  document.querySelector('.portPreview').classList.remove('nidusbg','darkspedebg','icondesignsbg');
-  document.querySelector('.portPreview').classList.add('energyumpirebg')};
+  document.querySelector('.portPreview').classList.remove('nidusbg','darkspedebg','icondesignsbg', 'fadein2');
+  document.querySelector('.portPreview').classList.add('energyumpirebg', 'fadein2')};
 
 function darkspedeChange(){
-  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg','icondesignsbg');
-  document.querySelector('.portPreview').classList.add('darkspedebg')};
+  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg','icondesignsbg', 'fadein3');
+  document.querySelector('.portPreview').classList.add('darkspedebg', 'fadein3')};
 
 function icondesignsChange(){
-  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg');
-  document.querySelector('.portPreview').classList.add('icondesignsbg')};
+  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg', 'fadein');
+  document.querySelector('.portPreview').classList.add('icondesignsbg', 'fadein')};
 
 function resetList(){
-  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg','icondesignsbg')};
+  document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg','icondesignsbg', 'fadein', 'fadein2', 'fadein3')};

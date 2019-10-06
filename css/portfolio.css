@@ -18,11 +18,10 @@
 }
 .portList a{
   text-decoration: none;
-  color: var(--decor-color);
 }
 .portTitle{
   color: var(--text-color);
-  font-size: 4vw;
+  font-size: 3.5vw;
   white-space: nowrap;
   -webkit-white-space: nowrap;
   -webkit-transition: color 0.2s ease-out, transform 0.2s ease-out, font-size 0.2s ease-out;
@@ -44,7 +43,6 @@
   max-width: 400px;
   height: 29vw;
   max-height: 400px;
-
   background-size: cover;
   background-position: center;
   background-color: var(--decor-color);
@@ -72,11 +70,11 @@
 }
 
 
-@media (max-width: 1600px){
+@media (max-width: 1400px){
   .portTitle{
     font-size: 5vw;
   }
-  portList a:hover > li .portTitle, .portList a:focus > li .portTitle {
+  .portList a:hover > li .portTitle, .portList a:focus > li .portTitle {
     font-size: 6vw;
   }
 }
