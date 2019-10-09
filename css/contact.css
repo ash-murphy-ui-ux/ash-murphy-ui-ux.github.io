@@ -1,0 +1,99 @@
+.contact{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.email{
+  margin-bottom: 50px;
+}
+.email h1 a{
+  position: relative;
+  font-weight: 800;
+  font-size:calc(0.7em + 2vw);
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  color: var(--text-color);
+  -webkit-transition:color 0.2s ease-out, opacity 0.2s ease-out ;
+  -moz-transition: color 0.2s ease-out, opacity 0.2s ease-out ;
+  -ms-transition: color 0.2s ease-out, opacity 0.2s ease-out ;
+  -o-transition: color 0.2s ease-out, opacity 0.2s ease-out ;
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+}
+.email h1 a::after{
+  position: absolute;
+  left: 102%;
+  transform: translate(-100%, 0);
+  content: '';
+  width: 0%;
+  height: 0%;
+  border-right: 6px solid var(--decor-color);
+  border-bottom: 6px solid var(--decor-color);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -ms-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.email h1 a::before{
+  position: absolute;
+  left:-2%;
+  transform: rotate(180);
+  content: '';
+  width: 0%;
+  height: 0%;
+  border-top: 6px solid var(--decor-color);
+  border-left: 6px solid var(--decor-color);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -ms-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.email h1 a:hover::after, .email h1 a:hover::before, .email h1 a:focus::after, .email h1 a:focus::before{
+  width: 103%;
+  height: 106%;
+  opacity: 1;
+}
+
+.contact h2{
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.3em;
+  letter-spacing: -0.04em;
+}
+.social-links a{
+  fill: var(--text-color);
+  -webkit-transition:fill 0.2s ease-out; 
+  -moz-transition: fill 0.2s ease-out;
+  -ms-transition: fill 0.2s ease-out;
+  -o-transition: fill 0.2s ease-out;
+  transition: fill 0.2s ease-out;
+}
+.social-links a:hover, .social-links a:focus{
+  fill: var(--decor-color);
+}
+
+.social-links{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 600px){
+  .email h1 a{
+    font-size:1em;
+}
