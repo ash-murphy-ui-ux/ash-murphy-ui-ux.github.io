@@ -67,9 +67,10 @@
   position: fixed;
   top: 90%;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   transform: translate(-50%, -50%);
+    cursor: pointer;
   -webkit-transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out, transform 0.2s ease-out ;
   -ms-transition: opacity 0.2s ease-out, transform 0.2s ease-out ;
@@ -79,26 +80,31 @@
 .d-arrow.scrolled{
   opacity: 0;
   transform: translate(-50%, -50px);
+
 }
 .d-arrow:before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
+  left: 6%;
   border-left: 6px solid var(--decor-color);
   border-bottom: 6px solid var(--decor-color);
-  transform: translate(6px, 26px) rotate(-45deg);
+  transform: translate(0px, 26px) rotate(-45deg);
   animation: d-arrow 5s linear infinite;
+
 }
 .d-arrow:after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
+  left: 6%;
   border-left: 6px solid var(--decor-color);
   border-bottom: 6px solid var(--decor-color);
-  transform: translate(13px, 0px) rotate(-45deg);
+  transform: translate(0px, 0px) rotate(-45deg);
   animation: d-arrow 5s linear infinite -2.5s;
+
 }
 
 @keyframes d-arrow {

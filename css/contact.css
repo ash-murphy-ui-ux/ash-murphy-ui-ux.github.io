@@ -1,3 +1,4 @@
+
 .contact{
   position: absolute;
   top:50%;
@@ -12,6 +13,7 @@
 }
 .email{
   margin-bottom: 50px;
+
 }
 .email h1 a{
   position: relative;
@@ -46,7 +48,7 @@
 
 .email h1 a::before{
   position: absolute;
-  left:-2%;
+  left:-10px;
   transform: rotate(180);
   content: '';
   width: 0%;
@@ -63,7 +65,7 @@
 }
 
 .email h1 a:hover::after, .email h1 a:hover::before, .email h1 a:focus::after, .email h1 a:focus::before{
-  width: 103%;
+  width:102%;
   height: 106%;
   opacity: 1;
 }
@@ -76,7 +78,7 @@
 }
 .social-links a{
   fill: var(--text-color);
-  -webkit-transition:fill 0.2s ease-out; 
+  -webkit-transition:fill 0.2s ease-out;
   -moz-transition: fill 0.2s ease-out;
   -ms-transition: fill 0.2s ease-out;
   -o-transition: fill 0.2s ease-out;

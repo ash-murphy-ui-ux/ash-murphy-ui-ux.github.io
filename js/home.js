@@ -60,4 +60,16 @@ function scrollAnim() {
       Arrow.classList.remove("scrolled");
     }
   }
-}
+};
+
+function scrollDown(){
+  var x = window.matchMedia("(max-width: 600px)");
+  //mobile
+  if (x.matches) {
+    document.body.scrollTop = 650;
+    document.documentElement.scrollTop = 650;
+  }else{
+  document.body.scrollTop = 750;
+  document.documentElement.scrollTop = 750;
+  }
+};

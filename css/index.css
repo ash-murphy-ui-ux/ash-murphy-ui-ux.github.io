@@ -30,6 +30,9 @@ html { font-family: 'Inter var', sans-serif; }
   --logo-fill: #FFFFFF;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: var(--bg-color);
   -webkit-transition: background-color 0.2s ease-out;
@@ -314,7 +317,7 @@ ul {
     transition: .25s ease-in-out;
   }
 
-  #navBurger:hover span {
+  #navBurger:hover span, #navBurger:focus span {
     background: var(--decor-color);
   }
   #navBurger.open  span:nth-child(2) {
