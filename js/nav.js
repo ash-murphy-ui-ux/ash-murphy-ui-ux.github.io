@@ -42,34 +42,31 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 //active nav link
-window.addEventListener('hashchange', navActive);
-document.querySelector('#nav').addEventListener('load', navActive(event));
+window.addEventListener('hashchange', navActive, false);
+document.querySelector('#nav').addEventListener('load', navActive(event), false);
 
 function navActive(e) {
-	var path = window.location.hash;
-	homelink = document.querySelector('#homelink');
-	portlink = document.querySelector('#portlink');
-	contlink = document.querySelector('#contlink');
+	e.preventDefault;
+	document.querySelector('#wrap').classList.remove('moveout');
 	document.querySelector('#app').classList.remove('fadein');
-	document.querySelector('#app').classList.remove('fadein2');
-	document.querySelector('#app').classList.remove('fadein3');
+	void document.querySelector('#wrap').offsetWidth;
+	var path = window.location.hash;
+	document.querySelector('#app').classList.add('fadein');
+	document.querySelector('#wrap').classList.add('moveout');
 
 	if (path == '#home' || path == ''){
 		document.querySelector('#homelink').classList.add('active');
 		document.querySelector('#portlink').classList.remove('active');
 		document.querySelector('#contlink').classList.remove('active');
-		document.querySelector('#app').classList.add('fadein');
 
 	} else if (path == '#portfolio'){
 		document.querySelector('#homelink').classList.remove('active');
 		document.querySelector('#portlink').classList.add('active');
 		document.querySelector('#contlink').classList.remove('active');
-		document.querySelector('#app').classList.add('fadein2');
 
 	} else if (path == '#contact'){
 		document.querySelector('#portlink').classList.remove('active');
 		document.querySelector('#homelink').classList.remove('active');
 		document.querySelector('#contlink').classList.add('active');
-		document.querySelector('#app').classList.add('fadein3');
 	}
 };

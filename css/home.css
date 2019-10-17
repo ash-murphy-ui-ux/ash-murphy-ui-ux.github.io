@@ -136,7 +136,7 @@
 
 
 /*mobile*/
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #logo.unscrolled {
     top: 20%;
     left: 50%;
@@ -146,7 +146,7 @@
 
   #name {
     top: 40%;
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 5.5vw;
     left: 50%;
     margin-left: -40%;
@@ -170,7 +170,7 @@
 }
 
 /*desktop*/
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   #logo.unscrolled {
     top: 29%;
     left: 7%;

@@ -30,7 +30,7 @@ function scrollAnim() {
   var Name = document.querySelector("#name");
   var Desc = document.querySelector("#desc");
   var Arrow = document.querySelector(".d-arrow");
-  var x = window.matchMedia("(max-width: 600px)");
+  var x = window.matchMedia("(max-width: 750px)");
   //mobile
   if (x.matches) {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -63,7 +63,7 @@ function scrollAnim() {
 };
 
 function scrollDown(){
-  var x = window.matchMedia("(max-width: 600px)");
+  var x = window.matchMedia("(max-width: 750px)");
   //mobile
   if (x.matches) {
     document.body.scrollTop = 650;

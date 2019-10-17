@@ -32,6 +32,7 @@ html { font-family: 'Inter var', sans-serif; }
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body{
   background-color: var(--bg-color);
@@ -80,27 +81,44 @@ ul {
   opacity: 1;
   color: var(--decor-color);
 }
+#wrap{
+ position: absolute;
+ top: 0;
+ left:0;
+ right: 0;
+ bottom: 0;
+}
+#app {
 
+}
+.moveout{
+  animation: slider 1s ease-out;
+}
+@keyframes slider {
+    0% {transform: translateX(0);}
+    50% { transform: translateX(100%);}
+    100% {transform: translateX(0);}
+}
 .fadein {
     -webkit-animation: smooth 0.5s ease-in;
     -moz-animation: smooth 0.5s ease-in;
     -o-animation: smooth 0.5s ease-in;
     -ms-animation: smooth 0.5s ease-in;
-    animation: smooth 0.5s ease-in;
+    animation: smooth 0.5s ease-in 0.5s ;
 }
 .fadein2 {
     -webkit-animation: smooth2 0.5s ease-in;
     -moz-animation: smooth2 0.5s ease-in;
     -o-animation: smooth2 0.5s ease-in;
     -ms-animation: smooth2 0.5s ease-in;
-    animation: smooth2 0.5s ease-in;
+    animation: smooth2 0.5s ease-in 0.5s;
 }
 .fadein3 {
     -webkit-animation: smooth3 0.5s ease-in;
     -moz-animation: smooth3 0.5s ease-in;
     -o-animation: smooth3 0.5s ease-in;
     -ms-animation: smooth3 0.5s ease-in;
-    animation: smooth3 0.5s ease-in;
+    animation: smooth3 0.5s ease-in 0.5s;
 }
 
 @-webkit-keyframes smooth {
@@ -235,7 +253,7 @@ ul {
   transform: translate(20px, 0px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .menu {
     height: 60%;
     width: 90%;
@@ -353,7 +371,7 @@ ul {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   #navBurger {
     display:none;
   }

@@ -23,7 +23,8 @@ Router.prototype = {
       var r = this.routes;
       (function(scope, r) {
           window.addEventListener('hashchange', function (e) {
-              scope.hasChanged(scope, r);
+              setTimeout(function(e){
+                scope.hasChanged(scope, r);}, 500);
           });
       })(this, r);
       this.hasChanged(this, r);
