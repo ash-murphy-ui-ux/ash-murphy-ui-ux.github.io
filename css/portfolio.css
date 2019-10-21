@@ -38,6 +38,9 @@
 }
 
 .portPreview {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   float: right;
   width: 29vw;
   max-width: 400px;
@@ -46,6 +49,7 @@
   background-size: cover;
   background-position: center;
   background-color: var(--decor-color);
+  border-radius: 50%;
   color: var(--text-color);
   -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
   -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
@@ -53,7 +57,14 @@
   -o-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
   transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
 }
+#checkOut{
+  text-align: center;
+  color: var(--bg-color);
+  font-size: 4vw;
+}
 .nidusbg{
+  content:'';
+  border-radius: 0;
   background-image: url('https://via.placeholder.com/800');
 }
 

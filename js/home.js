@@ -16,11 +16,13 @@ if (path == '#home' || path == ''){
   window.addEventListener('load', scrollAnim);
   window.addEventListener('resize', scrollAnim);
 } else {
-  //need to style inline or else it gets overwitten even though haschange should be stopping it from being overwritten
-  Logo.style.top = '40px';
-  Logo.style.left = '7%';
-  Logo.style.width = '80px';
-  Logo.style.margin = '0 0 0 0';
+  setTimeout(function(){
+  //need to style inline or else it gets overwitten even though hashchange should be stopping it from being overwritten
+    Logo.style.top = '40px';
+    Logo.style.left = '7%';
+    Logo.style.width = '80px';
+    Logo.style.margin = '0 0 0 0';
+  }, 200);
   }
 };
 
@@ -54,7 +56,8 @@ function scrollAnim() {
       Desc.classList.add("scrolled");
       Arrow.classList.add("scrolled");
     } else {
-      Logo.classList.add("unscrolled");
+      setTimeout(function(){
+      Logo.classList.add("unscrolled");}, 100);
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
       Arrow.classList.remove("scrolled");

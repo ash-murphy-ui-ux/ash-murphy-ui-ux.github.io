@@ -31,10 +31,10 @@ html { font-family: 'Inter var', sans-serif; }
 }
 
 html{
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
+  overflow-x: hidden;
   background-color: var(--bg-color);
   -webkit-transition: background-color 0.2s ease-out;
   -moz-transition: background-color 0.2s ease-out ;
@@ -88,63 +88,37 @@ ul {
  right: 0;
  bottom: 0;
 }
-#app {
-
-}
 .moveout{
-  animation: slider 1s ease-out;
+  animation: slider 0.6s ease-in-out;
 }
 @keyframes slider {
-    0% {transform: translateX(0);}
-    50% { transform: translateX(100%);}
-    100% {transform: translateX(0);}
+    0% {transform: translateY(0); opacity: 1;}
+    20% {opacity: 0;}
+    50% { transform: translateY(10%); opacity: 0;}
+    60% {opacity: 0; transform: translateY(-10%);}
+    100% {transform: translateY(0); opacity: 1;}
 }
 .fadein {
-    -webkit-animation: smooth 0.5s ease-in;
-    -moz-animation: smooth 0.5s ease-in;
-    -o-animation: smooth 0.5s ease-in;
-    -ms-animation: smooth 0.5s ease-in;
-    animation: smooth 0.5s ease-in 0.5s ;
-}
-.fadein2 {
-    -webkit-animation: smooth2 0.5s ease-in;
-    -moz-animation: smooth2 0.5s ease-in;
-    -o-animation: smooth2 0.5s ease-in;
-    -ms-animation: smooth2 0.5s ease-in;
-    animation: smooth2 0.5s ease-in 0.5s;
-}
-.fadein3 {
-    -webkit-animation: smooth3 0.5s ease-in;
-    -moz-animation: smooth3 0.5s ease-in;
-    -o-animation: smooth3 0.5s ease-in;
-    -ms-animation: smooth3 0.5s ease-in;
-    animation: smooth3 0.5s ease-in 0.5s;
+    -webkit-animation: fader 0.5s ease-in;
+    -moz-animation: fader 0.5s ease-in;
+    -o-animation: fader 0.5s ease-in;
+    -ms-animation: fader 0.5s ease-in;
+    animation: fader 1s ease-in ;
 }
 
-@-webkit-keyframes smooth {
+@-webkit-keyframes fader {
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
-
-@-moz-keyframes smooth {
+@-moz-keyframes fader {
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
-
-@-o-keyframes smooth {
+@-o-keyframes fader {
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
-
-@keyframes smooth {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
-@keyframes smooth2 {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
-@keyframes smooth3 {
+@keyframes fader {
     0% { opacity: 0;}
     100% { opacity: 1;}
 }

@@ -13,10 +13,11 @@
 }
 .email{
   margin-bottom: 50px;
-
+}
+.email h1{
+  position: relative;
 }
 .email h1 a{
-  position: relative;
   font-weight: 800;
   font-size:calc(0.7em + 2vw);
   letter-spacing: -0.04em;
@@ -28,15 +29,16 @@
   -o-transition: color 0.2s ease-out, opacity 0.2s ease-out ;
   transition: color 0.2s ease-out, opacity 0.2s ease-out;
 }
-.email h1 a::after{
+.email h1::after{
   position: absolute;
   left: 102%;
-  transform: translate(-100%, 0);
+  transform-origin: right;
+  transform: translateX(-100%);
   content: '';
   width: 0%;
   height: 0%;
-  border-right: 6px solid var(--decor-color);
-  border-bottom: 6px solid var(--decor-color);
+  border-right: 7px solid var(--decor-color);
+  border-bottom: 7px solid var(--decor-color);
   z-index: -1;
   opacity: 0;
   -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
@@ -46,15 +48,14 @@
   transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-.email h1 a::before{
+.email h1::before{
   position: absolute;
-  left:-10px;
-  transform: rotate(180);
   content: '';
+  left: -2%;
   width: 0%;
   height: 0%;
-  border-top: 6px solid var(--decor-color);
-  border-left: 6px solid var(--decor-color);
+  border-top: 7px solid var(--decor-color);
+  border-left:  7px solid var(--decor-color);
   z-index: -1;
   opacity: 0;
   -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
@@ -64,9 +65,9 @@
   transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-.email h1 a:hover::after, .email h1 a:hover::before, .email h1 a:focus::after, .email h1 a:focus::before{
-  width:102%;
-  height: 106%;
+.email h1:hover::after, .email h1:hover::before, .email h1:focus::after, .email h1:focus::before{
+  width:102.5%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -95,7 +96,12 @@
   justify-content: space-around;
 }
 
-@media (max-width: 600px){
+@media (max-width: 750px){
   .email h1 a{
-    font-size:1em;
+    font-size:calc(0.5em + 2vw);
+  }
+  .email h1:hover::after, .email h1:hover::before, .email h1:focus::after, .email h1:focus::before{
+    width:102%;
+  }
+
 }

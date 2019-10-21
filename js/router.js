@@ -23,8 +23,12 @@ Router.prototype = {
       var r = this.routes;
       (function(scope, r) {
           window.addEventListener('hashchange', function (e) {
+            document.querySelector('body').style.overflowY = 'hidden';
               setTimeout(function(e){
-                scope.hasChanged(scope, r);}, 500);
+                scope.hasChanged(scope, r);}, 300);
+              /*disable scrollbar durring transition*/
+              setTimeout(function(){
+                document.querySelector('body').style.overflowY = '';}, 550);
           });
       })(this, r);
       this.hasChanged(this, r);

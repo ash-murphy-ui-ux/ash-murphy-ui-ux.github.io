@@ -48,10 +48,8 @@ document.querySelector('#nav').addEventListener('load', navActive(event), false)
 function navActive(e) {
 	e.preventDefault;
 	document.querySelector('#wrap').classList.remove('moveout');
-	document.querySelector('#app').classList.remove('fadein');
 	void document.querySelector('#wrap').offsetWidth;
 	var path = window.location.hash;
-	document.querySelector('#app').classList.add('fadein');
 	document.querySelector('#wrap').classList.add('moveout');
 
 	if (path == '#home' || path == ''){
