@@ -129,6 +129,7 @@ ul {
   text-align: center;
   justify-content: center;
   text-transform: uppercase;
+  letter-spacing: -0.03em;
 }
 
 .decor {
@@ -143,10 +144,13 @@ ul {
 /*nightmode switch*/
 .switchLabel {
   position: absolute;
+  letter-spacing: -0.04em;
+  font-size: 0.9em;
 }
 #lightLabel{
   color:#3DDC84;
   opacity: var(--label-light-opacity);
+  font-weight: 200;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out ;
   -ms-transition: opacity 0.2s ease-out ;
@@ -156,6 +160,7 @@ ul {
 #nightLabel{
   color:#FF5A5F;
   opacity: var(--label-night-opacity);
+  font-weight: 200;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out ;
   -ms-transition: opacity 0.2s ease-out ;
@@ -393,7 +398,7 @@ ul {
 
   #nav {
     width: 40%;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 800;
     justify-content: space-evenly;
   }

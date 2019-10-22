@@ -49,22 +49,25 @@ function navActive(e) {
 	e.preventDefault;
 	document.querySelector('#wrap').classList.remove('moveout');
 	void document.querySelector('#wrap').offsetWidth;
+	var homelink = document.querySelector('#homelink');
+	var portlink = document.querySelector('#portlink');
+	var contlink = document.querySelector('#contlink');
 	var path = window.location.hash;
 	document.querySelector('#wrap').classList.add('moveout');
 
 	if (path == '#home' || path == ''){
-		document.querySelector('#homelink').classList.add('active');
-		document.querySelector('#portlink').classList.remove('active');
-		document.querySelector('#contlink').classList.remove('active');
+		homelink.classList.add('active');
+		portlink.classList.remove('active');
+		contlink.classList.remove('active');
 
 	} else if (path == '#portfolio'){
-		document.querySelector('#homelink').classList.remove('active');
-		document.querySelector('#portlink').classList.add('active');
-		document.querySelector('#contlink').classList.remove('active');
+		homelink.classList.remove('active');
+		portlink.classList.add('active');
+		contlink.classList.remove('active');
 
 	} else if (path == '#contact'){
-		document.querySelector('#portlink').classList.remove('active');
-		document.querySelector('#homelink').classList.remove('active');
-		document.querySelector('#contlink').classList.add('active');
+		portlink.classList.remove('active');
+		homelink.classList.remove('active');
+		contlink.classList.add('active');
 	}
 };

@@ -15,6 +15,7 @@
   float: left;
   font-weight: 700;
   font-style: italic;
+  letter-spacing: -0.2em;
 }
 .portList a{
   text-decoration: none;
@@ -63,7 +64,6 @@
   font-size: 4vw;
 }
 .nidusbg{
-  content:'';
   border-radius: 0;
   background-image: url('https://via.placeholder.com/800');
 }

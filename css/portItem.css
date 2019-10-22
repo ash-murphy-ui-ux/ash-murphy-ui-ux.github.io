@@ -19,3 +19,14 @@
   border-bottom: 5px solid var(--decor-color);
   transform: rotate(45deg);
 }
+
+.portPage{
+  position: relative;
+  top: 120px;
+  width: 80vw;
+  max-width: 1200px;
+}
+
+.projInfo{
+  display: flex;
+}
