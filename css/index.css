@@ -31,7 +31,7 @@ html { font-family: 'Inter var', sans-serif; }
 }
 
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body{
   overflow-x: hidden;
@@ -45,13 +45,7 @@ body{
 
 .menu {
   position: fixed;
-  display:flex;
-  align-items: center;
-  justify-content: center;
   z-index: 9;
-}
-.portBtn{
-  display: none;
 }
 ul {
   list-style: none;
@@ -81,22 +75,24 @@ ul {
   opacity: 1;
   color: var(--decor-color);
 }
+
 #wrap{
  position: absolute;
  top: 0;
  left:0;
  right: 0;
  bottom: 0;
+ transition: transform .3s ease-in-out;
 }
 .moveout{
   animation: slider 0.6s ease-in-out;
 }
 @keyframes slider {
-    0% {transform: translateY(0); opacity: 1;}
+    0% {transform: translateY(0) translateX(); opacity: 1;}
     20% {opacity: 0;}
-    50% { transform: translateY(10%); opacity: 0;}
+    50% { transform: translateY(10%) translateX(); opacity: 0;}
     60% {opacity: 0; transform: translateY(-10%);}
-    100% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(0) translateX(); opacity: 1;}
 }
 .fadein {
     -webkit-animation: fader 0.5s ease-in;
@@ -127,9 +123,13 @@ ul {
   display:flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .decor {
@@ -233,40 +233,37 @@ ul {
 }
 
 @media (max-width: 750px) {
+  .switchLabel{
+    display: none;
+  }
   .menu {
-    height: 60%;
-    width: 90%;
-    left: 50%;
-    margin-left: -45%;
-    opacity: 0;
-    top: -100%;
-    background-color: var(--bg-color);
-    border: 5px solid var(--text-color);
+    height: 100%;
+    width:20%;
+    right: -20%;
     -webkit-transition: opacity 0.3s ease,top 0.3s ease 0.3s;
     -moz-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
     -ms-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
     -o-transition: opacity 0.3s ease, top 0.3s ease 0.3s;
-    transition:opacity 0.3s ease, top 0.3s ease 0.3s, z-index 0.3s ease 3s;
-  }
-  #nav {
-    height: 60%;
-    flex-direction: column;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    justify-content: space-evenly;
-  }
-  .openM {
-    opacity:1;
-    top: 30px;
-    z-index: 11;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    transition: .3s ease-in-out;
   }
 
+  #nav{
+    flex-direction: column;
+    height: 80%;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .openM {
+    transform: translateX(-100%);
+    z-index: 11;
+  }
+  #nav li {
+    transform:  rotate(90deg);
+  }
+
+  .pushed{
+    transform: translateX(-20%);
+  }
   /*mobile nav .menu button*/
   #navBurger {
     z-index:12;
@@ -276,20 +273,6 @@ ul {
     top: 38px;
     right: 5%;
     cursor: pointer;
-  }
-
-  #navBurger #navBurgercheckbox{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 13;
   }
 
   #navBurger span {
@@ -317,15 +300,15 @@ ul {
   #navBurger:hover span, #navBurger:focus span {
     background: var(--decor-color);
   }
-  #navBurger.open  span:nth-child(2) {
-    background: var(--decor-color);
+  #navBurger.open  span:nth-child(1) {
+    background:var(--decor-color);
     -webkit-transform: translate(0, 8px) rotate(45deg);
     -moz-transform: translate(0, 8px) rotate(45deg);
     -ms-transform: translate(0, 8px) rotate(45deg);
     -o-transform: translate(0, 8px) rotate(45deg);
     transform: translate(0, 8px) rotate(45deg);
   }
-  #navBurger.open  span:nth-child(3) {
+  #navBurger.open  span:nth-child(2) {
     background: var(--decor-color);
     -webkit-transform: translate(0, -8px) rotate(-45deg);
     -moz-transform: translate(0, -8px) rotate(-45deg);
@@ -334,16 +317,11 @@ ul {
     transform: translate(0, -8px) rotate(-45deg);
   }
 
-  .switchLabel {
-    top:19px;
-    left: 65px;
-    font-weight: 500;
-    width:45px;
-    text-align: right;
-  }
   .dark-btn{
-    top: 14px;
-    left: 8px;
+    top: 90%;
+    left: 50%;
+    margin-left: -25px;
+    transform: rotate(90deg);
   }
   .menubg {
     display:none;
@@ -400,6 +378,5 @@ ul {
     width: 40%;
     font-size: 1em;
     font-weight: 800;
-    justify-content: space-evenly;
   }
 }

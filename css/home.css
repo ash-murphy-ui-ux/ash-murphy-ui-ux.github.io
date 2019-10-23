@@ -10,11 +10,11 @@
   margin: 0 0 0 0;
   fill: var(--logo-fill);
   z-index: 10;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out ;
-  -ms-transition: all 0.3s ease-out ;
-  -o-transition: all 0.3s ease-out ;
-  transition: all 0.3s ease-out;
+  -webkit-transition: .3s ease-in-out ;
+  -moz-transition: .3s ease-in-out ;
+  -ms-transition: .3s ease-in-out ;
+  -o-transition: .3s ease-in-out ;
+  transition:.3s ease-in-out;
 }
 
 #logo:hover, #logo:focus {
@@ -61,6 +61,7 @@
 
 #desc.scrolled {
   opacity: 1;
+  transform: translateY(-50%);
 }
 
 .d-arrow {
@@ -164,7 +165,7 @@
   #desc {
     top:50%;
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 25%;
     opacity: 0;
   }
 }
@@ -201,7 +202,7 @@
   #desc {
     position: sticky;
     position: -webkit-sticky;
-    top:29%;
+    top:50%;
     padding-bottom: 10%;
   }
 }

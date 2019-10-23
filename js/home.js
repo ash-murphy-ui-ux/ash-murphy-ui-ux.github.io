@@ -35,7 +35,7 @@ function scrollAnim() {
   var x = window.matchMedia("(max-width: 750px)");
   //mobile
   if (x.matches) {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
       Logo.classList.remove("unscrolled");
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");

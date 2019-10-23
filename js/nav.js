@@ -8,12 +8,26 @@
 			e.preventDefault();
 			this.menuToggle.classList.toggle('open');
 			this.menu.classList.toggle('openM');
+			document.querySelector('#wrap').classList.toggle('pushed');
 		}
 	};
 
 	hamburger.menuToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
 
 }());
+
+document.querySelector('#wrap').addEventListener('click', closeMenu);
+document.querySelector('#homelink').addEventListener('click', closeMenu);
+document.querySelector('#portlink').addEventListener('click', closeMenu);
+document.querySelector('#contlink').addEventListener('click', closeMenu);
+function closeMenu(e){
+	if (document.querySelector('#navBurger').classList.contains('open') && document.querySelector('menu').classList.contains('openM')){
+		document.querySelector('#navBurger').classList.toggle('open');
+		document.querySelector('menu').classList.toggle('openM');
+		document.querySelector('#wrap').classList.toggle('pushed');
+	}
+};
+
 
 
 //night mode switch
