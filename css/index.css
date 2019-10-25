@@ -4,6 +4,35 @@ html { font-family: 'Inter', sans-serif; }
 html { font-family: 'Inter var', sans-serif; }
 }
 
+.fadein {
+    -webkit-animation: fader 2s ease-in;
+    -moz-animation: fader 2s ease-in;
+    -o-animation: fader 2s ease-in;
+    -ms-animation: fader 2s ease-in;
+    animation: fader 2s ease-in ;
+}
+
+@-webkit-keyframes fader {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-moz-keyframes fader {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-o-keyframes fader {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes fader {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -94,30 +123,7 @@ ul {
     60% {opacity: 0; transform: translateY(-10%);}
     100% {transform: translateY(0) translateX(); opacity: 1;}
 }
-.fadein {
-    -webkit-animation: fader 0.5s ease-in;
-    -moz-animation: fader 0.5s ease-in;
-    -o-animation: fader 0.5s ease-in;
-    -ms-animation: fader 0.5s ease-in;
-    animation: fader 1s ease-in ;
-}
 
-@-webkit-keyframes fader {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
-@-moz-keyframes fader {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
-@-o-keyframes fader {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
-@keyframes fader {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
-}
 
 #nav {
   display:flex;
