@@ -60,28 +60,47 @@ window.addEventListener('hashchange', navActive, false);
 document.querySelector('#nav').addEventListener('load', navActive(event), false);
 
 function navActive(e) {
-	e.preventDefault;
-	document.querySelector('#wrap').classList.remove('moveout');
-	void document.querySelector('#wrap').offsetWidth;
+
 	var homelink = document.querySelector('#homelink');
 	var portlink = document.querySelector('#portlink');
 	var contlink = document.querySelector('#contlink');
 	var path = window.location.hash;
-	document.querySelector('#wrap').classList.add('moveout');
+	var oldHash = event.oldURL.split("#")[1];
+	console.log(oldHash)
+
 
 	if (path == '#home' || path == ''){
 		homelink.classList.add('active');
 		portlink.classList.remove('active');
 		contlink.classList.remove('active');
+			if (oldHash == 'portfolio' || oldHash == 'contact'){
+			document.querySelector('#wrap').classList.remove('moveright');
+			document.querySelector('#wrap').classList.remove('moveleft');
+			void document.querySelector('#wrap').offsetWidth;
+			document.querySelector('#wrap').classList.add('moveleft');};
 
 	} else if (path == '#portfolio'){
 		homelink.classList.remove('active');
 		portlink.classList.add('active');
 		contlink.classList.remove('active');
-
+			if (oldHash == 'contact'){
+			document.querySelector('#wrap').classList.remove('moveright');
+			document.querySelector('#wrap').classList.remove('moveleft');
+			void document.querySelector('#wrap').offsetWidth;
+			document.querySelector('#wrap').classList.add('moveleft');}
+			else if (oldHash == 'home'){
+			document.querySelector('#wrap').classList.remove('moveright');
+			document.querySelector('#wrap').classList.remove('moveleft');
+			void document.querySelector('#wrap').offsetWidth;
+			document.querySelector('#wrap').classList.add('moveright');};
 	} else if (path == '#contact'){
 		portlink.classList.remove('active');
 		homelink.classList.remove('active');
 		contlink.classList.add('active');
+			if (oldHash == 'home' || oldHash == 'portfolio'){
+			document.querySelector('#wrap').classList.remove('moveright');
+			document.querySelector('#wrap').classList.remove('moveleft');
+			void document.querySelector('#wrap').offsetWidth;
+			document.querySelector('#wrap').classList.add('moveright');};
 	}
 };
