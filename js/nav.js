@@ -88,16 +88,17 @@ function navActive(e) {
 			document.querySelector('#wrap').classList.remove('moveleft');
 			void document.querySelector('#wrap').offsetWidth;
 			document.querySelector('#wrap').classList.add('moveleft');}
-			else if (oldHash == 'home'){
+			else if (oldHash == 'home' || oldHash == undefined){
 			document.querySelector('#wrap').classList.remove('moveright');
 			document.querySelector('#wrap').classList.remove('moveleft');
 			void document.querySelector('#wrap').offsetWidth;
 			document.querySelector('#wrap').classList.add('moveright');};
+
 	} else if (path == '#contact'){
 		portlink.classList.remove('active');
 		homelink.classList.remove('active');
 		contlink.classList.add('active');
-			if (oldHash == 'home' || oldHash == 'portfolio'){
+			if (oldHash == 'home' || oldHash == undefined || oldHash == 'portfolio'){
 			document.querySelector('#wrap').classList.remove('moveright');
 			document.querySelector('#wrap').classList.remove('moveleft');
 			void document.querySelector('#wrap').offsetWidth;
