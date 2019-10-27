@@ -1,24 +1,16 @@
-
-document.querySelector('.portfolio').addEventListener('click', projInterval)
-function projInterval() {
-  var interval = setInterval(function() {
-      if (document.querySelector('.portPage').length > 0) {
-        dynamicProj();
-        clearInterval(interval);
-      }
-    }, 100);
-};
-
 function dynamicProj() {
     var project = window.location.hash.split("/")[1];
-    console.log("proj =", project);
+    var title = document.querySelector('#pTitleh1');
+    var subtitle = document.querySelector('#pTitleh2');
+    var date = document.querySelector('#dateh2');
+    var deliv = document.querySelector('#deliverablesh2');
+    var desc = document.querySelector('#descp')
     if (project == 'nidus'){
-      console.log('nidus page');
-      document.querySelector('.pTitle').innerHTML = '<h1>Nidus</h1>';
+      title.innerText = 'Nidus';
+      subtitle.innerText = 'Smarthome App Concept';
     }
     else if (project == 'energyumpire'){
-      console.log('eu page');
-      document.querySelector('.pTitle').innerHTML = '<h1>Energy Umpire</h1>';
+      title.innerText = 'Energy Umpire';
     }
 };
 

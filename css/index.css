@@ -9,7 +9,7 @@ html { font-family: 'Inter var', sans-serif; }
     -moz-animation: fader 2s ease-in;
     -o-animation: fader 2s ease-in;
     -ms-animation: fader 2s ease-in;
-    animation: fader 2s ease-in ;
+    animation: fader 1s ease-in ;
 }
 
 @-webkit-keyframes fader {
@@ -63,6 +63,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
+  overflow-y: scroll;
   overflow-x: hidden;
   background-color: var(--bg-color);
   -webkit-transition: background-color 0.2s ease-out;
@@ -119,13 +120,22 @@ ul {
  bottom: 0;
  transition: transform .3s ease-in-out;
 }
-.moveout{
-  animation: sliderVert 0.6s ease-in-out;
+.moveup{
+  animation: sliderUp 0.6s ease-in-out;
 }
-@keyframes sliderVert {
+@keyframes sliderUp {
     0%    {transform: translateY(0%); opacity: 1;}
     20%   {transform: translateY(-10%); opacity: 0;}
     60%   {transform: translateY(20%); opacity: 0;}
+    100%  {transform: translateY(0); opacity: 1;}
+}
+.movedown{
+  animation: sliderDown 0.6s ease-in-out;
+}
+@keyframes sliderDown {
+    0%    {transform: translateY(0%); opacity: 1;}
+    20%   {transform: translateY(10%); opacity: 0;}
+    60%   {transform: translateY(-20%); opacity: 0;}
     100%  {transform: translateY(0); opacity: 1;}
 }
 
@@ -283,7 +293,7 @@ ul {
     font-weight: 600;
   }
   .openM {
-    transform: translateX(-100%);
+    transform: translateX(-107%);
     z-index: 11;
   }
   #nav li {
@@ -296,7 +306,7 @@ ul {
   /*mobile nav .menu button*/
   #navBurger {
     z-index:12;
-    position: fixed;
+    position: absolute;
     height: 50px;
     width: 50px;
     top: 38px;
@@ -367,7 +377,7 @@ ul {
     height: 120px;
     top:0;
   }
-  .menubg{
+  /*.menubg{
     position: fixed;
     background-color: var(--bg-color);
     opacity: 0.1;
@@ -383,7 +393,7 @@ ul {
   }
   .menu:hover ~ .menubg, #logo:hover ~ .menubg{
     opacity: 0.9;
-  }
+  }*/
 
   .dark-btn {
     top: 50%;
