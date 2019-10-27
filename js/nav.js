@@ -66,8 +66,6 @@ function navActive(e) {
 	var contlink = document.querySelector('#contlink');
 	var path = window.location.hash;
 	var oldHash = event.oldURL.split("#")[1];
-	console.log(oldHash)
-
 
 	if (path == '#home' || path == ''){
 		homelink.classList.add('active');

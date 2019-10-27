@@ -52,7 +52,7 @@
 
 .portPage{
   position: absolute;
-  top: 120px;
+  top: calc(120px + 5%);
   width: 80vw;
   max-width: 1200px;
   left: 50%;
@@ -69,7 +69,7 @@
 
 .pTitle {
   grid-area: pTitle;
-  padding-bottom: 1em;
+  padding-bottom: 4em;
 }
 .pTitle h1{
   font-size: 6em;

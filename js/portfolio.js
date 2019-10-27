@@ -1,33 +1,26 @@
-window.addEventListener('hashchange', function(){
-if(window.location.href.indexOf("portfolio/") > -1) {
-       console.log("Portfolio item detected");
-}});
 
-/* OVER THE TOP METHOD
-window.addEventListener('hashchange', hello);
-window.addEventListener('DOMContentLoaded', hello);
-function hello () {
-  if (window.location.hash == '#portfolio'){
-    setInterval(bgchange, 100);
-    //need to set interval because it can't see element on load for some reason
-    function bgchange(){
-      document.querySelector('#nidus').addEventListener('mouseover', function(){
-        document.querySelector('.portPreview').classList.remove('energyumpirebg', 'darkspedebg','icondesignsbg');
-        document.querySelector('.portPreview').classList.add('nidusbg')})
-      document.querySelector('#energyumpire').addEventListener('mouseover', function(){
-        document.querySelector('.portPreview').classList.remove('nidusbg','darkspedebg','icondesignsbg');
-        document.querySelector('.portPreview').classList.add('energyumpirebg')})
-      document.querySelector('#darkspede').addEventListener('mouseover', function(){
-        document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg','icondesignsbg');
-        document.querySelector('.portPreview').classList.add('darkspedebg')})
-      document.querySelector('#icondesigns').addEventListener('mouseover', function(){
-        document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg');
-        document.querySelector('.portPreview').classList.add('icondesignsbg')})
-      document.querySelector('.portList').addEventListener('mouseleave', function(){
-        document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg','icondesignsbg')})
+document.querySelector('.portfolio').addEventListener('click', projInterval)
+function projInterval() {
+  var interval = setInterval(function() {
+      if (document.querySelector('.portPage').length > 0) {
+        dynamicProj();
+        clearInterval(interval);
+      }
+    }, 100);
+};
+
+function dynamicProj() {
+    var project = window.location.hash.split("/")[1];
+    console.log("proj =", project);
+    if (project == 'nidus'){
+      console.log('nidus page');
+      document.querySelector('.pTitle').innerHTML = '<h1>Nidus</h1>';
     }
-  }
-};*/
+    else if (project == 'energyumpire'){
+      console.log('eu page');
+      document.querySelector('.pTitle').innerHTML = '<h1>Energy Umpire</h1>';
+    }
+};
 
 /* triggered in html*/
 function nidusChange(){
