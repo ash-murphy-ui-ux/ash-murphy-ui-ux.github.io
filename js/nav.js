@@ -55,30 +55,36 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 
-//active nav link
 function transOut(){
 	var oldHashLocal = oldHash;
 	var wrap = document.querySelector('#wrap');
 	var path = window.location.hash;
 	wrap.classList.remove('moveright');
 	wrap.classList.remove('moveright2');
-	wrap.classList.remove('moveleft');
 	wrap.classList.remove('moveup');
-	wrap.classList.remove('movedown');
+	wrap.classList.remove('moveup2');
 	wrap.classList.remove('moveback');
 	if (path == '#home' || path == ''){
 			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
 				wrap.classList.add('moveright2');
-		};
+		}
+			else if (oldHashLocal.indexOf("portfolio/") > -1){
+				wrap.classList.add('moveup2');
+			};
 	} else if (path == '#portfolio'){
 			if (oldHashLocal  == 'contact'){
 			wrap.classList.add('moveright2');}
-			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
-			wrap.classList.add('moveright');};
+			else if (oldHashLocal == 'home' || oldHashLocal == undefined){
+			wrap.classList.add('moveright');}
+			else if (oldHashLocal.indexOf("portfolio/") > -1){
+				wrap.classList.add('moveup2');
+			};
 	} else if (path == '#contact'){
 			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
 			wrap.classList.add('moveright');};
-	}
+	} else if (path.indexOf("portfolio/") > -1){
+			wrap.classList.add('moveup');
+		}
 };
 
 function navActive() {
@@ -89,6 +95,8 @@ function navActive() {
 	var wrap = document.querySelector('#wrap');
 	wrap.classList.remove('moveright2');
 	wrap.classList.remove('moveright');
+	wrap.classList.remove('moveup');
+	wrap.classList.remove('moveup2');
 	var path = window.location.hash;
 	if (path == '#home' || path == ''){
 		homelink.classList.add('active');
@@ -96,19 +104,30 @@ function navActive() {
 		contlink.classList.remove('active');
 			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
 				wrap.classList.add('moveright');
-				setTimeout(function(){wrap.classList.add('moveback');},300);
-		};
+				setTimeout(function(){wrap.classList.add('moveback');},200);
+			}
+			else if (oldHashLocal == undefined){
+				console.log('Welcome');
+			}
+			else if (oldHashLocal.indexOf("portfolio/") > -1){
+				wrap.classList.add('moveup');
+				setTimeout(function(){wrap.classList.add('moveback');},200);
+			};
 	} else if (path == '#portfolio'){
 		homelink.classList.remove('active');
 		portlink.classList.add('active');
 		contlink.classList.remove('active');
 			if (oldHashLocal  == 'contact'){
 				wrap.classList.add('moveright');
-				setTimeout(function(){wrap.classList.add('moveback');},300);
+				setTimeout(function(){wrap.classList.add('moveback');},200);
 			}
 			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
 				wrap.classList.add('moveright2');
-				setTimeout(function(){wrap.classList.add('moveback');},300);
+				setTimeout(function(){wrap.classList.add('moveback');},200);
+			}
+			else if (oldHashLocal.indexOf("portfolio/") > -1){
+				wrap.classList.add('moveup');
+				setTimeout(function(){wrap.classList.add('moveback');},200);
 			};
 	} else if (path == '#contact'){
 		portlink.classList.remove('active');
@@ -116,10 +135,19 @@ function navActive() {
 		contlink.classList.add('active');
 			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
 				wrap.classList.add('moveright2');
-				setTimeout(function(){wrap.classList.add('moveback');},300);
-			};
+				setTimeout(function(){wrap.classList.add('moveback');},200);
+			}
+	}	else if (path.indexOf("portfolio/") > -1){
+					wrap.classList.add('moveup2');
+					setTimeout(function(){wrap.classList.add('moveback');},200);
 	}
+	/* remove all transforms so fixed elements work correctly*/
+	setTimeout(function(){
+	wrap.classList.remove('moveright');
+	wrap.classList.remove('moveright2');
+	wrap.classList.remove('moveup');
+	wrap.classList.remove('moveup2');
+	wrap.classList.remove('moveback');},200);
 };
 
-/*			else if (oldHash.indexOf("portfolio/") > -1){
-};*/
+/*			*/

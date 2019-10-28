@@ -16,13 +16,11 @@ if (path == '#home' || path == ''){
   window.addEventListener('load', scrollAnim);
   window.addEventListener('resize', scrollAnim);
 } else {
-  setTimeout(function(){
   //need to style inline or else it gets overwitten even though hashchange should be stopping it from being overwritten
     Logo.style.top = '40px';
     Logo.style.left = '7%';
     Logo.style.width = '80px';
     Logo.style.margin = '0 0 0 0';
-  }, 200);
   }
 };
 
