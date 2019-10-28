@@ -57,48 +57,75 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 //active nav link
 function transOut(){
-	
+	var oldHashLocal = oldHash;
+	var wrap = document.querySelector('#wrap');
+	var path = window.location.hash;
+	wrap.classList.remove('moveright');
+	wrap.classList.remove('moveright2');
+	wrap.classList.remove('moveleft');
+	wrap.classList.remove('moveup');
+	wrap.classList.remove('movedown');
+	wrap.classList.remove('moveback');
+	void wrap.offsetWidth;
+
+	if (path == '#home' || path == ''){
+			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
+				wrap.classList.add('moveright2');
+		};
+
+	} else if (path == '#portfolio'){
+			if (oldHashLocal  == 'contact'){
+			wrap.classList.add('moveright2');}
+
+			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
+			wrap.classList.add('moveright2');};
+
+
+	} else if (path == '#contact'){
+			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
+			wrap.classList.add('moveright');};
+	}
 };
 
 function navActive() {
 	var oldHashLocal = oldHash;
-	console.log("oldHashLocal  = ", oldHashLocal);
 	var homelink = document.querySelector('#homelink');
 	var portlink = document.querySelector('#portlink');
 	var contlink = document.querySelector('#contlink');
 	var wrap = document.querySelector('#wrap');
-	wrap.classList.remove('moveright');
-	wrap.classList.remove('moveleft');
-	wrap.classList.remove('moveup');
-	wrap.classList.remove('movedown');
-	void wrap.offsetWidth;
 	var path = window.location.hash;
-	if (path.indexOf("#portfolio/") > -1){
-		wrap.classList.add('movedown');
-	}
-	else if (path == '#home' || path == ''){
+	if (path == '#home' || path == ''){
 		homelink.classList.add('active');
 		portlink.classList.remove('active');
 		contlink.classList.remove('active');
 			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
-			wrap.classList.add('moveleft');
+				wrap.classList.add('moveright');
+				setTimeout(function(){wrap.classList.remove('moveright');
+			wrap.classList.remove('moveright2');},300);
 		};
 	} else if (path == '#portfolio'){
 		homelink.classList.remove('active');
 		portlink.classList.add('active');
 		contlink.classList.remove('active');
 			if (oldHashLocal  == 'contact'){
-			wrap.classList.add('moveleft');}
+				wrap.classList.add('moveright');
+				setTimeout(function(){wrap.classList.add('moveback');},300);
+			}
 			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
-			wrap.classList.add('moveright');}
-			else if (oldHash.indexOf("portfolio/") > -1){
-			wrap.classList.add('moveup');
-			};
+				wrap.classList.add('moveright2');
+				setTimeout(function(){wrap.classList.add('moveback');},300);
+			}
+
 	} else if (path == '#contact'){
 		portlink.classList.remove('active');
 		homelink.classList.remove('active');
 		contlink.classList.add('active');
 			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
-			wrap.classList.add('moveright');};
+				wrap.classList.add('moveright2');
+				setTimeout(function(){wrap.classList.add('moveback');},300);
+			};
 	}
 };
+
+/*			else if (oldHash.indexOf("portfolio/") > -1){
+};*/

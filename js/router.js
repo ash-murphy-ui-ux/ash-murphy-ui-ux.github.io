@@ -23,8 +23,9 @@ Router.prototype = {
   init: function () {
       var r = this.routes;
       (function(scope, r) {
-          window.addEventListener('hashchange', function bla(e) {
+          window.addEventListener('hashchange', function (e) {
             oldHash = event.oldURL.split("#")[1];
+            transOut();
             scope.hasChanged(scope, r);
           });
       })(this, r);
@@ -53,14 +54,15 @@ Router.prototype = {
               xhttp = new XMLHttpRequest();
           xhttp.onload = function () {
               if (this.readyState === 4 && this.status === 200) {
+                  navActive();
                   scope.rootElem.innerHTML = this.responseText;
                   dynamicProj();
-                  navActive();
+
               }
           };
           xhttp.open('GET', url, true);
           setTimeout(function(){
-          xhttp.send();}, 300);
+          xhttp.send();},300)
       })(this);
   }
 };
