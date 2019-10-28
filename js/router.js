@@ -1,4 +1,5 @@
 'use strict';
+var oldHash;
 
 function Router(routes) {
     try {
@@ -22,12 +23,9 @@ Router.prototype = {
   init: function () {
       var r = this.routes;
       (function(scope, r) {
-          window.addEventListener('hashchange', function (e) {
-            
-              setTimeout(function(e){
-                scope.hasChanged(scope, r);}, 300);
-              /*disable scrollbar durring transition*/
-              
+          window.addEventListener('hashchange', function bla(e) {
+            oldHash = event.oldURL.split("#")[1];
+            scope.hasChanged(scope, r);
           });
       })(this, r);
       this.hasChanged(this, r);
@@ -57,10 +55,12 @@ Router.prototype = {
               if (this.readyState === 4 && this.status === 200) {
                   scope.rootElem.innerHTML = this.responseText;
                   dynamicProj();
+                  navActive();
               }
           };
           xhttp.open('GET', url, true);
-          xhttp.send();
+          setTimeout(function(){
+          xhttp.send();}, 300);
       })(this);
   }
 };

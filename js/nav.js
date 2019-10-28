@@ -56,23 +56,23 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 //active nav link
-window.addEventListener('hashchange', navActive, false);
-document.querySelector('#nav').addEventListener('load', navActive(event), false);
+function transOut(){
+	
+};
 
-function navActive(e) {
-
+function navActive() {
+	var oldHashLocal = oldHash;
+	console.log("oldHashLocal  = ", oldHashLocal);
 	var homelink = document.querySelector('#homelink');
 	var portlink = document.querySelector('#portlink');
 	var contlink = document.querySelector('#contlink');
-	var path = window.location.hash;
-	var oldHash = event.oldURL.split("#")[1];
 	var wrap = document.querySelector('#wrap');
 	wrap.classList.remove('moveright');
 	wrap.classList.remove('moveleft');
 	wrap.classList.remove('moveup');
 	wrap.classList.remove('movedown');
 	void wrap.offsetWidth;
-	console.log(oldHash);
+	var path = window.location.hash;
 	if (path.indexOf("#portfolio/") > -1){
 		wrap.classList.add('movedown');
 	}
@@ -80,16 +80,16 @@ function navActive(e) {
 		homelink.classList.add('active');
 		portlink.classList.remove('active');
 		contlink.classList.remove('active');
-			if (oldHash == 'portfolio' || oldHash == 'contact'){
+			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
 			wrap.classList.add('moveleft');
 		};
 	} else if (path == '#portfolio'){
 		homelink.classList.remove('active');
 		portlink.classList.add('active');
 		contlink.classList.remove('active');
-			if (oldHash == 'contact'){
+			if (oldHashLocal  == 'contact'){
 			wrap.classList.add('moveleft');}
-			else if (oldHash == 'home' || oldHash == undefined){
+			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
 			wrap.classList.add('moveright');}
 			else if (oldHash.indexOf("portfolio/") > -1){
 			wrap.classList.add('moveup');
@@ -98,7 +98,7 @@ function navActive(e) {
 		portlink.classList.remove('active');
 		homelink.classList.remove('active');
 		contlink.classList.add('active');
-			if (oldHash == 'home' || oldHash == undefined || oldHash == 'portfolio'){
+			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
 			wrap.classList.add('moveright');};
 	}
 };
