@@ -160,14 +160,17 @@ ul {
     100%  {transform: translateX(0); opacity: 1;}
 }
 */
-.moveright{
-  opacity: 0;
-  transform: translateX(-50%);
-}
+
 .moveright2{
   opacity: 0;
   transform: translateX(50%);
 }
+
+.moveright{
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
 .moveback{
   opacity: 1;
   transform: translateX(0%);

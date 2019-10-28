@@ -66,21 +66,15 @@ function transOut(){
 	wrap.classList.remove('moveup');
 	wrap.classList.remove('movedown');
 	wrap.classList.remove('moveback');
-	void wrap.offsetWidth;
-
 	if (path == '#home' || path == ''){
 			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
 				wrap.classList.add('moveright2');
 		};
-
 	} else if (path == '#portfolio'){
 			if (oldHashLocal  == 'contact'){
 			wrap.classList.add('moveright2');}
-
 			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
-			wrap.classList.add('moveright2');};
-
-
+			wrap.classList.add('moveright');};
 	} else if (path == '#contact'){
 			if (oldHashLocal  == 'home' || oldHashLocal  == undefined || oldHashLocal  == 'portfolio'){
 			wrap.classList.add('moveright');};
@@ -93,6 +87,8 @@ function navActive() {
 	var portlink = document.querySelector('#portlink');
 	var contlink = document.querySelector('#contlink');
 	var wrap = document.querySelector('#wrap');
+	wrap.classList.remove('moveright2');
+	wrap.classList.remove('moveright');
 	var path = window.location.hash;
 	if (path == '#home' || path == ''){
 		homelink.classList.add('active');
@@ -100,8 +96,7 @@ function navActive() {
 		contlink.classList.remove('active');
 			if (oldHashLocal  == 'portfolio' || oldHashLocal  == 'contact'){
 				wrap.classList.add('moveright');
-				setTimeout(function(){wrap.classList.remove('moveright');
-			wrap.classList.remove('moveright2');},300);
+				setTimeout(function(){wrap.classList.add('moveback');},300);
 		};
 	} else if (path == '#portfolio'){
 		homelink.classList.remove('active');
@@ -114,8 +109,7 @@ function navActive() {
 			else if (oldHashLocal  == 'home' || oldHashLocal  == undefined){
 				wrap.classList.add('moveright2');
 				setTimeout(function(){wrap.classList.add('moveback');},300);
-			}
-
+			};
 	} else if (path == '#contact'){
 		portlink.classList.remove('active');
 		homelink.classList.remove('active');
