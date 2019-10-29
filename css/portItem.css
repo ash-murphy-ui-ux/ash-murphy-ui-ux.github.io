@@ -75,6 +75,10 @@
   font-weight: 300;
   font-style: italic;
 }
+.deliverables #deliverablesh2, .date #dateh2{
+  font-size: 1.3em;
+  font-weight: 600;
+}
 .desc {
   grid-area: desc;
   padding-top: 1em;
@@ -89,6 +93,7 @@
   grid-area: deliverables;
   color: var(--text-color);
 }
+
 
 .projImg{
 /*width: 100vw;

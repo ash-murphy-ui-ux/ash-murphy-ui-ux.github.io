@@ -6,8 +6,6 @@
   width: 80vw;
   max-width: 1200px;
 }
-
-
 .portList{
   position: absolute;
   top: 50%;
@@ -59,9 +57,11 @@
   transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
 }
 #checkOut{
+  text-transform: uppercase;
+  letter-spacing: -0.06em;
   text-align: center;
   color: var(--bg-color);
-  font-size: 4vw;
+  font-weight: 800;
 }
 .nidusbg{
   border-radius: 0;
@@ -80,6 +80,19 @@
   background-image: url('https://via.placeholder.com/900');
 }
 
+.textCheck{
+  line-height: 0.85;
+  font-size: 4.6vw;
+}
+.textProject{
+  line-height: 0.8;
+  font-size: 3.5vw;
+}
+.textOuta{
+  line-height: 0.8;
+  font-size: 5.2vw;
+}
+
 
 @media (max-width: 1400px){
   .portTitle{
@@ -89,6 +102,47 @@
     font-size: 6vw;
   }
 }
+
+@media (max-width: 750px) {
+  .portfolio {
+    top: 0;
+    transform: translate(-50%, 0%);
+    width:80vw;
+    height: 80%;
+  }
+  .portList{
+    top: calc(100px + 10%);
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .portList a:hover > li .portTitle, .portList a:focus > li .portTitle {
+    font-size: 13vw;
+    transform: translate(0, 0);
+  }
+  .portPreview {
+    float: none;
+    transform: translate(15%, 180%);
+    width: 60vw;
+    height: 60vw;
+  }
+  .portTitle{
+    font-size: 10vw;
+  }
+
+  .textCheck{
+    line-height: 0.85;
+    font-size: 12vw;
+  }
+  .textProject{
+    line-height: 0.8;
+    font-size: 9.3vw;
+  }
+  .textOuta{
+    line-height: 0.8;
+    font-size: 14vw;
+  }
+}
+
 /*.portItem {
   display: flex;
   align-items: center;

@@ -8,6 +8,7 @@
   left: 7%;
   width: 80px;
   margin: 0 0 0 0;
+  transform: translate(0,0);
   fill: var(--logo-fill);
   z-index: 10;
   -webkit-transition: .3s ease-in-out ;
@@ -72,7 +73,7 @@
   width: 35px;
   height: 35px;
   transform: translate(-50%, -50%);
-    cursor: pointer;
+  cursor: pointer;
   -webkit-transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out, transform 0.2s ease-out ;
   -ms-transition: opacity 0.2s ease-out, transform 0.2s ease-out ;
@@ -140,8 +141,8 @@
 /*mobile*/
 @media (max-width: 750px) {
   #logo.unscrolled {
-    top: 20%;
-    left: 50%;
+    top: 20vh;
+    left: 50vw;
     margin: 0 0 0 -35vw;
     width: 70vw;
   }

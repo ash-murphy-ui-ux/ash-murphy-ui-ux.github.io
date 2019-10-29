@@ -57,12 +57,11 @@ Router.prototype = {
                   navActive();
                   scope.rootElem.innerHTML = this.responseText;
                   dynamicProj();
-
               }
           };
           xhttp.open('GET', url, true);
           setTimeout(function(){
-          xhttp.send();},300)
+          xhttp.send();},300);
       })(this);
   }
 };

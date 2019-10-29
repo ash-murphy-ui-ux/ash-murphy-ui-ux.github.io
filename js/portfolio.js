@@ -11,6 +11,14 @@ function dynamicProj() {
     }
     else if (project == 'energyumpire'){
       title.innerText = 'Energy Umpire';
+      subtitle.innerText = 'Partial Web UI Redesign';
+    }
+    else if (project == 'darkspede'){
+      title.innerText = 'Darkspede';
+      subtitle.innerText = 'Prototype Smarthome AI app';
+    }
+    else if (project == 'icondesigns'){
+      title.innerText = 'Icon Designs';
     }
 };
 
@@ -37,5 +45,5 @@ function icondesignsChange(){
 
 function resetList(){
   document.querySelector('.portPreview').classList.remove('nidusbg','energyumpirebg', 'darkspedebg','icondesignsbg');
-  document.querySelector('#checkOut').innerHTML = 'Check out a <span style = "font-size: 5vw">Project</span>';
+  document.querySelector('#checkOut').innerHTML = '<span class = "textCheck">Check</span><br><span class = "textOuta">out a</span><br> <span class = "textProject">Project</span>';
 };

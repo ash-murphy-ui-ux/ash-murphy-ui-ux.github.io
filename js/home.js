@@ -17,8 +17,9 @@ if (path == '#home' || path == ''){
   window.addEventListener('resize', scrollAnim);
 } else {
   //need to style inline or else it gets overwitten even though hashchange should be stopping it from being overwritten
+Logo.classList.remove("unscrolled");
     Logo.style.top = '40px';
-    Logo.style.left = '7%';
+    Logo.style.left = '7vw';
     Logo.style.width = '80px';
     Logo.style.margin = '0 0 0 0';
   }
@@ -34,12 +35,14 @@ function scrollAnim() {
   //mobile
   if (x.matches) {
     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-      Logo.classList.remove("unscrolled");
+      setTimeout(function(){
+      Logo.classList.remove("unscrolled");}, 0);
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
       Arrow.classList.add("scrolled");
     } else {
-      Logo.classList.add("unscrolled");
+      setTimeout(function(){
+      Logo.classList.add("unscrolled");}, 0);
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
       Arrow.classList.remove("scrolled");
@@ -49,13 +52,14 @@ function scrollAnim() {
   //desktop
   else{
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-      Logo.classList.remove("unscrolled");
+      setTimeout(function(){
+      Logo.classList.remove("unscrolled");}, 0);
       Name.classList.add("scrolled");
       Desc.classList.add("scrolled");
       Arrow.classList.add("scrolled");
     } else {
       setTimeout(function(){
-      Logo.classList.add("unscrolled");}, 100);
+      Logo.classList.add("unscrolled");}, 0);
       Name.classList.remove("scrolled");
       Desc.classList.remove("scrolled");
       Arrow.classList.remove("scrolled");
