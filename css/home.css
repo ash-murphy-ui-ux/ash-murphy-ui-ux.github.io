@@ -191,7 +191,7 @@
   }
 
   .below-fold {
-    height:125%;
+    height:100%;
     left: 55%;
     width: 35%;
     -webkit-transition: all 0.5s ease-out;
@@ -205,6 +205,5 @@
     position: sticky;
     position: -webkit-sticky;
     top:50%;
-    padding-bottom: 10%;
   }
 }

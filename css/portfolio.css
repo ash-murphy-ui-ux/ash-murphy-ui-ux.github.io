@@ -45,9 +45,10 @@
   max-width: 400px;
   height: 29vw;
   max-height: 400px;
-  background-size: cover;
   background-position: center;
   background-color: var(--decor-color);
+  background-repeat:no-repeat;
+  background-size: 65%;
   border-radius: 50%;
   color: var(--text-color);
   -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, transform 0.25s ease;
@@ -64,20 +65,20 @@
   font-weight: 800;
 }
 .nidusbg{
-  border-radius: 0;
-  background-image: url('https://via.placeholder.com/800');
+  background-image: url('/img/niduslogo.svg');
 }
 
 .energyumpirebg{
-  background-image: url('https://via.placeholder.com/600');
+  background-image: url('/img/energyumpire.svg');
 }
 
 .darkspedebg{
-  background-image: url('https://via.placeholder.com/300');
+  background-image: url('/img/phantomface.svg');
 }
 
 .icondesignsbg{
-  background-image: url('https://via.placeholder.com/900');
+  background-image: url('/img/icons.svg');
+  background-size: 80%;
 }
 
 .textCheck{

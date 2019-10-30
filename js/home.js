@@ -71,8 +71,8 @@ function scrollDown(){
   var x = window.matchMedia("(max-width: 750px)");
   //mobile
   if (x.matches) {
-    document.body.scrollTop = 650;
-    document.documentElement.scrollTop = 650;
+    document.body.scrollTop = 400;
+    document.documentElement.scrollTop = 400;
   }else{
   document.body.scrollTop = 750;
   document.documentElement.scrollTop = 750;

@@ -8,17 +8,26 @@ function dynamicProj() {
     if (project == 'nidus'){
       title.innerText = 'Nidus';
       subtitle.innerText = 'Smarthome App Concept';
+      date.innerText = 'March - June 2019';
+      deliv.innerText = 'UI/UX Design, Branding';
     }
     else if (project == 'energyumpire'){
       title.innerText = 'Energy Umpire';
-      subtitle.innerText = 'Partial Web UI Redesign';
+      subtitle.innerText = 'Minor Web UI Redesign';
+      date.innerText = 'Nov 2018 - Feb 2019'
+      deliv.innerText = 'UI Design, UX Copy';
     }
     else if (project == 'darkspede'){
-      title.innerText = 'Darkspede';
+      title.innerText = 'Phantom Gateway';
       subtitle.innerText = 'Prototype Smarthome AI app';
+      date.innerText = 'Nov 2017 - Jan 2018'
+      deliv.innerText = 'UI/UX Design';
     }
     else if (project == 'icondesigns'){
       title.innerText = 'Icon Designs';
+      subtitle.innerText = 'When I have spare time';
+      date.innerText = 'Ongoing'
+      deliv.innerText = 'Icons';
     }
 };
 
