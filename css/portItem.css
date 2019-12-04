@@ -95,14 +95,16 @@
   grid-area: deliverables;
   color: var(--text-color);
 }
-
-
-.projImg{
+.pImg{
 /*width: 100vw;
   margin-left: -10vw;*/
-  width: 100%;
+  max-width:100%;
   height: auto;
   background-color: grey;
+}
+.pImgInner{
+  max-width:100%;
+  height: auto;
 }
 @media (max-width: 750px) {
   .projInfo{
