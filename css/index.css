@@ -60,6 +60,7 @@ html { font-family: 'Inter var', sans-serif; }
 }
 
 html{
+  -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 body{
@@ -108,6 +109,9 @@ a:hover, a:focus {
   -ms-transition: all 0.5s ease-out ;
   -o-transition: all 0.5s ease-out ;
   transition: all 0.5s ease-out ;
+}
+#logo:hover, #logo:focus{
+  opacity: 1;
 }
 
 a.active, a:active{
@@ -304,11 +308,11 @@ a.active, a:active{
   /*mobile nav .menu button*/
   #navBurger {
     z-index:12;
-    position: absolute;
+    top: 38px;
+    position: fixed;
     height: 50px;
     width: 50px;
-    top: 38px;
-    right: 5%;
+    left: 80vw;
     cursor: pointer;
   }
 
@@ -374,6 +378,14 @@ a.active, a:active{
     width: 100vw;
     height: 120px;
     top:0;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: .3s ease-in-out;
+  }
+  .hidden {
+    opacity: 0;
   }
   /*.menubg{
     position: fixed;

@@ -61,7 +61,7 @@ Router.prototype = {
           };
           xhttp.open('GET', url, true);
           setTimeout(function(){
-          xhttp.send();},300);
+          xhttp.send();},200);
       })(this);
   }
 };

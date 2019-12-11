@@ -149,5 +149,3 @@ function navActive() {
 	wrap.classList.remove('moveup2');
 	wrap.classList.remove('moveback');},200);
 };
-
-/*			*/

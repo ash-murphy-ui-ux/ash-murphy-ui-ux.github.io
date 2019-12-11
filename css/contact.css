@@ -87,6 +87,7 @@
 }
 .social-links a:hover, .social-links a:focus{
   fill: var(--decor-color);
+  opacity: 1;
 }
 
 .social-links{
