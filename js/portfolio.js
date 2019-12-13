@@ -23,7 +23,8 @@ function dynamicProj() {
       title.innerText = 'Phantom Gateway';
       subtitle.innerText = 'Prototype Smarthome AI app';
       date.innerText = 'Nov 2017 - Jan 2018';
-      deliv.innerText = 'UI/UX Design';
+      deliv.innerText = 'Branding, UI/UX Design';
+      desc.innerHTML = 'This project was done as part of a Deakin "Capstone" project in cooperation with Darkspede, a VR software developer based in North Melbourne. Darkspede wanted our student team to build a functional prototype app based on their vision for what a smarthome could be. In essence, Phantom Gateway was your average smarthome app, but would heavily AI assisted. Due to the project being under an NDA, not every aspect of the project can be discussed or shown. I can, however, show off some of my contributions to the public presentation we gave.'
     }
     else if (project == 'icondesigns'){
       title.innerText = 'Icon Designs';
