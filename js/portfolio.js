@@ -18,13 +18,14 @@ function dynamicProj() {
       subtitle.innerText = 'Minor Web UI Redesign';
       date.innerText = 'Nov 2018 - Feb 2019';
       deliv.innerText = 'UI Design, UX Copy';
+      desc.innerHTML = '<p>I undertook my work placement unit with Energy Umpire, an energy plan comparison service that is based in Melbourne Docklands. Energy Umpire is a startup and was undergoing a transition from phone based service to web based. They wanted me to help with this transition by designing some emails, flyers, web pages and give feedback on their new onboarding form. I got into a process of designing with Adobe XD, uploading to InVision, then getting feedback from other staff and the CEO. I would then iterate on this feedback until everyone was happy, and the designs were marked on InVision as complete.</p><br><p>While I was there, I was only able to see one of my web page designs be implemented onto the live site, which I needed to help with some aspects as the website was built on wordpress and their wordpress developer was struggling with the design. So unfortunately it was not 100% exactly how I envisioned the page turning out (thanks, Wordpress), but everyone there was impressed with my designs and work ethic. The feedback and encouragement I was given has been invaluable to me and I am so thankful for my time at Energy umpire.</p>'
     }
     else if (project == 'darkspede'){
       title.innerText = 'Phantom Gateway';
       subtitle.innerText = 'Prototype Smarthome AI app';
       date.innerText = 'Nov 2017 - Jan 2018';
       deliv.innerText = 'Branding, UI/UX Design';
-      desc.innerHTML = 'This project was done as part of a Deakin "Capstone" project in cooperation with Darkspede, a VR software developer based in North Melbourne. Darkspede wanted our student team to build a functional prototype app based on their vision for what a smarthome could be. In essence, Phantom Gateway was your average smarthome app, but would heavily AI assisted. Due to the project being under an NDA, not every aspect of the project can be discussed or shown. I can, however, show off some of my contributions to the public presentation we gave.'
+      desc.innerHTML = '<p>This project was done as part of a Deakin "Capstone" project in cooperation with Darkspede, a VR software developer based in North Melbourne. Darkspede wanted our student team to build a functional prototype app based on their vision for what a smarthome could be. In essence, Phantom Gateway was your average smarthome app, but would be heavily AI assisted.</p><br><p>Due to the project being under a NDA, not every aspect of the project can be discussed or shown. I can, however, show off some of my contributions to the public presentation we gave. Darkspede was my first project working with a team for a real client, so it was a huge learning opportunity for me. While I have expanded my skills and knowledge since completing this project, I will always remember the experience.</p>'
     }
     else if (project == 'icondesigns'){
       title.innerText = 'Icon Designs';

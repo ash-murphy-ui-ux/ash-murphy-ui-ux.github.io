@@ -1,19 +1,28 @@
+.portPage{
+  margin: 100px auto;
+  width: 86vw;
+  max-width: 1200px;
+}
+
 .portBtn {
+  position: fixed;
+  transform: translateX(100px);
+  top:40px;
   display: block;
-  width: 250px;
+  width: 230px;
   text-decoration: none;
   padding: 10px 0 10px 0;
   color: var(--text-color);
-  -webkit-transition: color 0.5s ease-out;
-  -moz-transition: color 0.5s ease-out ;
-  -ms-transition: color 0.5s ease-out ;
-  -o-transition: color 0.5s ease-out ;
-  transition: color 0.5s ease-out ;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: color 0.5s ease-out, transform 0.3s ease-out;
+  -moz-transition: color 0.5s ease-out, transform 0.3s ease-out ;
+  -ms-transition: color 0.5s ease-out, transform 0.3s ease-out ;
+  -o-transition: color 0.5s ease-out, transform 0.3s ease-out ;
+  transition: color 0.5s ease-out, transform 0.3s ease-out ;
 }
 
-.portBtn:hover, .portBtn:focus {
+.portBtn:hover, .portBtn:focus, .portBtn:active {
   color: var(--decor-color);
-  opacity: 0.7;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out ;
   -ms-transition: all 0.5s ease-out ;
@@ -21,16 +30,13 @@
   transition: all 0.5s ease-out ;
 }
 
-.portBtn:active{
-  opacity: 1;
-  color: var(--decor-color);
-}
 .back-b{
   text-transform: uppercase;
   position: relative;
   font-size: 1.1em;
   font-weight: 600;
-  text-align: center;
+  text-align: right;
+  padding-right: 5px;
 }
 
 .back-arr{
@@ -46,14 +52,50 @@
   transform: rotate(135deg);
 }
 
-.portPage{
+.portBtn::after{
   position: absolute;
-  top: 100px;
-  width: 86vw;
-  max-width: 1200px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -10%;
+  left: 103%;
+  transform-origin: right;
+  transform: translateX(-100%);
+  content: '';
+  width: 0%;
+  height: 0%;
+  border-right: 7px solid var(--decor-color);
+  border-bottom: 7px solid var(--decor-color);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -ms-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
 }
+
+.portBtn::before{
+  position: absolute;
+  content: '';
+  top: -10%;
+  left: -3%;
+  width: 0%;
+  height: 0%;
+  border-top: 7px solid var(--decor-color);
+  border-left:  7px solid var(--decor-color);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition:width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -ms-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.portBtn:hover::after, .portBtn:hover::before, .portBtn:focus::after, .portBtn:focus::before{
+  width:102.5%;
+  height: 100%;
+  opacity: 1;
+}
+
 
 .projInfo{
   display: grid;
@@ -105,6 +147,10 @@
 .pImgInner{
   max-width:100%;
   height: auto;
+}
+@media (min-width: 1600px) {
+  .portBtn {
+    transform: translateX(0px);
 }
 @media (max-width: 750px) {
   .projInfo{
