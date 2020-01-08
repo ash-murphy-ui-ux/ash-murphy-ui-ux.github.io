@@ -6,7 +6,7 @@
 
 .portBtn {
   position: fixed;
-  transform: translateX(100px);
+  transform: translateX(120px);
   top:40px;
   display: block;
   width: 230px;
