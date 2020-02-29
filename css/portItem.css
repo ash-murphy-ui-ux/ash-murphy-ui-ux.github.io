@@ -13,7 +13,7 @@
   text-decoration: none;
   padding: 10px 0 10px 0;
   color: var(--text-color);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--portbt-color);
   -webkit-transition: color 0.5s ease-out, transform 0.3s ease-out;
   -moz-transition: color 0.5s ease-out, transform 0.3s ease-out ;
   -ms-transition: color 0.5s ease-out, transform 0.3s ease-out ;
@@ -140,9 +140,10 @@
 .pImg{
 /*width: 100vw;
   margin-left: -10vw;*/
+  text-align: center;
+  display: block;
   max-width:100%;
   height: auto;
-  background-color: grey;
 }
 .pImgInner{
   max-width:100%;

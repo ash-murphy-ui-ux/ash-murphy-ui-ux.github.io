@@ -16,10 +16,11 @@ function dynamicProj() {
     }
     else if (project == 'energyumpire'){
       title.innerText = 'Energy Umpire';
-      subtitle.innerText = 'Minor Web UI Redesign';
+      subtitle.innerText = 'Web and Email Redesign';
       date.innerText = 'Nov 2018 - Feb 2019';
       deliv.innerText = 'UI Design, UX Copy';
       desc.innerHTML = '<p>I undertook my work placement unit with Energy Umpire, an energy plan comparison service that is based in Melbourne Docklands. Energy Umpire is a startup and was undergoing a transition from phone based service to web based. They wanted me to help with this transition by designing some emails, flyers, web pages and give feedback on their new onboarding form. I got into a process of designing with Adobe XD, uploading to InVision, then getting feedback from other staff and the CEO. I would then iterate on this feedback until everyone was happy, and the designs were marked on InVision as complete.</p><br><p>While I was there, I was only able to see one of my web page designs be implemented onto the live site, which I needed to help with some aspects as the website was built on wordpress and their wordpress developer was struggling with the design. So unfortunately it was not 100% exactly how I envisioned the page turning out (thanks, Wordpress), but everyone there was impressed with my designs and work ethic. The feedback and encouragement I was given has been invaluable to me and I am so thankful for my time at Energy umpire.</p>';
+      pImg.innerHTML = '<img class = "pImgInner" alt = "Energy Umpire Page 1" src = "img/eu/1.png"><img class = "pImgInner" alt = "Energy Umpire Page 2" src = "img/eu/2.png"><img class = "pImgInner" alt = "Energy Umpire Page 3" src = "img/eu/3.png"><img class = "pImgInner" alt = "Energy Umpire Page 4" src = "img/eu/4.png"><img class = "pImgInner" alt = "Energy Umpire Page 5" src = "img/eu/5.png"><img class = "pImgInner" alt = "Energy Umpire Page 7" src = "img/eu/6.png"><img class = "pImgInner" alt = "Energy Umpire Page 7" src = "img/eu/7.png"><img class = "pImgInner" alt = "Energy Umpire Page 8" src = "img/eu/8.png"><img class = "pImgInner" alt = "Energy Umpire Page 9" src = "img/eu/9.png"><img class = "pImgInner" alt = "Energy Umpire Page 10" src = "img/eu/10.png">';
     }
     else if (project == 'darkspede'){
       title.innerText = 'Phantom Gateway';
