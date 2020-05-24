@@ -66,6 +66,11 @@
   transform: translateY(-50%);
 }
 
+.startlinks {
+  text-decoration: none;
+}
+
+
 .d-arrow {
   position: absolute;
   top: 90%;
