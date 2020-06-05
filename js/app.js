@@ -9,7 +9,10 @@
             new Route('portfolio/nidus', 'portfolio/portItem.html'),
             new Route('portfolio/energyumpire', 'portfolio/portItem.html'),
             new Route('portfolio/darkspede', 'portfolio/portItem.html'),
-            new Route('portfolio/icondesigns', 'portfolio/portItem.html')
+            new Route('portfolio/icondesigns', 'portfolio/portItem.html'),
+            new Route('secretrecipes', 'secretrecipes.html'),
+            new Route('secretrecipes/yoyos', 'secretrecipes/recipe.html'),
+            new Route('secretrecipes/scones', 'secretrecipes/recipe.html')
         ]);
     }
     init();

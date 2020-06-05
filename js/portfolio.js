@@ -11,7 +11,7 @@ function dynamicProj() {
       subtitle.innerText = 'Smarthome App Concept';
       date.innerText = 'March - June 2019';
       deliv.innerText = 'UI/UX Design, Branding';
-      desc.innerHTML = 'The Nidus project was created for a university assignment based on a smarthome app concept named "Nidus". The requirements included analysis of user personas and market competition to develop a content strategy, as well as designing of screens for a prototype app. You can view the <a href = "/img/nidus/nidus_content_strategy.pdf"> content strategy document here</a>. The prototype document can be viewed below or  <a href = "/img/nidus/nidus_prototype.pdf">as a PDF here.</a>';
+      desc.innerHTML = '<p>The Nidus project was created for a university assignment based on a smarthome app concept named "Nidus". The requirements included analysis of user personas and market competition to develop a content strategy, as well as designing of screens for a prototype app. You can view the <a href = "/img/nidus/nidus_content_strategy.pdf"> content strategy document here</a>. The prototype document can be viewed below or  <a href = "/img/nidus/nidus_prototype.pdf">as a PDF here.</a></p>';
       pImg.innerHTML = '<img class = "pImgInner" alt = "Nidus Page 1" src = "img/nidus/nidus01.jpg"><img class = "pImgInner" alt = "Nidus Page 2" src = "img/nidus/nidus02.jpg"><img class = "pImgInner" alt = "Nidus Page 3" src = "img/nidus/nidus03.jpg"><img class = "pImgInner" alt = "Nidus Page 4" src = "img/nidus/nidus04.jpg"><img class = "pImgInner" alt = "Nidus Page 5" src = "img/nidus/nidus05.jpg"><img class = "pImgInner" alt = "Nidus Page 7" src = "img/nidus/nidus06.jpg"><img class = "pImgInner" alt = "Nidus Page 7" src = "img/nidus/nidus07.jpg"><img class = "pImgInner" alt = "Nidus Page 8" src = "img/nidus/nidus08.jpg"><img class = "pImgInner" alt = "Nidus Page 9" src = "img/nidus/nidus09.jpg"><img class = "pImgInner" alt = "Nidus Page 10" src = "img/nidus/nidus10.jpg"><img class = "pImgInner" alt = "Nidus Page 11" src = "img/nidus/nidus11.jpg"><img class = "pImgInner" alt = "Nidus Page 12" src = "img/nidus/nidus12.jpg"><img class = "pImgInner" alt = "Nidus Page 13" src = "img/nidus/nidus13.jpg"><img class = "pImgInner" alt = "Nidus Page 14" src = "img/nidus/nidus14.jpg"><img class = "pImgInner" alt = "Nidus Page 15" src = "img/nidus/nidus15.jpg">';
     }
     else if (project == 'energyumpire'){
@@ -35,6 +35,18 @@ function dynamicProj() {
       subtitle.innerText = 'When I have spare time';
       date.innerText = 'Ongoing'
       deliv.innerText = 'Icons';
+    }
+    else if (project == 'yoyos'){
+      title.innerText = "Yo Yo's";
+      subtitle.innerHTML = 'Prep time: 10 mins<br>Cook time: 10-15 mins';
+      date.innerHTML = '<ul><li>  375g Butter</li> <li>  3 cups plain flower</li><li>  1 cup icing sugar</li><li>  1 cup custard powder</li><li>For icing: Icing sugar and lemon juice</ul>'
+      desc.innerHTML = '<ol><li>Preheat oven to 160C (180 for non-fan forced) and line a flat tray or two with baking paper.</li><li>Cream butter and sugar<li>Sift and combine dry ingredients in bowl then add the butter/sugar cream and mix until all combined.</li><li>Roll dough into small balls and place on the tray, then press lightly on them with a fork.</li><li>Cook for 10-15 mins, if they begin to go slightly brown they are over cooked.</li><li>When they have cooled, mix a bit of lemon juice and a lot of icing sugar together for icing.</li></ol>';
+    }
+    else if (project == 'scones'){
+      title.innerText = "Scones";
+      subtitle.innerHTML = 'Prep time: 5 mins<br>Cook time: 10 mins';
+      date.innerHTML = '<ul><li>  3 cups Self raising flour</li> <li>  3/4 cup cream</li><li>  1 cup lemonade</li></ul>'
+      desc.innerHTML = '<ol><li>Preheat oven to 230c (250 if non fan forced) and line a flat tray with baking paper.</li><li>Mix cream and lemonade together.<li> In a seperate bowl, make a well in the flour then pour in the cream/lemonade mixture.</li><li>Mix with a spatula until it just barely forms a light dough (don’t over mix or the scones will become rubbery).</li><li>Turn the dough out onto a floured surface and press out to about 5cm thick.</li><li>Use a scone cutter (or any tall cutter, a knife works too) to cut up the dough into desired sizes and place on tray.</li><li>Glaze a bit of milk on top of every scone and bake for ~10 mins or until lightly brown on top (watch them closely!).</li></ol>';
     }
 };
 

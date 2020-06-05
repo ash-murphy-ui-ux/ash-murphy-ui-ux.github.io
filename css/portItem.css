@@ -1,33 +1,26 @@
 .portPage{
-  margin: 100px auto;
+  margin: 150px auto;
   width: 86vw;
   max-width: 1200px;
 }
 
 .portBtn {
   position: fixed;
-  transform: translateX(120px);
-  top:40px;
+  transform: translateY(-50px);
   display: block;
   width: 230px;
   text-decoration: none;
   padding: 10px 0 10px 0;
-  color: var(--text-color);
-  background-color: var(--portbt-color);
-  -webkit-transition: color 0.5s ease-out, transform 0.3s ease-out;
-  -moz-transition: color 0.5s ease-out, transform 0.3s ease-out ;
-  -ms-transition: color 0.5s ease-out, transform 0.3s ease-out ;
-  -o-transition: color 0.5s ease-out, transform 0.3s ease-out ;
-  transition: color 0.5s ease-out, transform 0.3s ease-out ;
-}
-
-.portBtn:hover, .portBtn:focus, .portBtn:active {
   color: var(--decor-color);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out ;
-  -ms-transition: all 0.5s ease-out ;
-  -o-transition: all 0.5s ease-out ;
-  transition: all 0.5s ease-out ;
+  background-color: var(--portbt-color);
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out ;
+  -ms-transition: transform 0.3s ease-out ;
+  -o-transition: transform 0.3s ease-out ;
+  transition: transform 0.3s ease-out ;
+}
+.portBtn:hover, .portBtn:focus, .portBtn:active {
+  opacity: 1;
 }
 
 .back-b{
@@ -50,6 +43,19 @@
   border-left: 5px solid var(--decor-color);
   border-bottom: 5px solid var(--decor-color);
   transform: rotate(135deg);
+}
+
+/*.back-b-text {
+  background-color: var(--decor-color);
+}*/
+
+.portBtn:hover .back-b-text{
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out ;
+    -ms-transition: background-color 0.3s ease-out ;
+    -o-transition: background-color 0.3s ease-out ;
+    transition: background-color 0.3s ease-out ;
 }
 
 .portBtn::after{
@@ -148,11 +154,6 @@
 .pImgInner{
   max-width:100%;
   height: auto;
-}
-@media (min-width: 1600px) {
-  .portBtn {
-    transform: translateX(0px);
-  }
 }
 @media (max-width: 750px) {
   .projInfo{
